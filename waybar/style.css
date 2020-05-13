@@ -1,37 +1,4 @@
-
-
-/* -----------------------------------------------------------------------------
- * Keyframes
- * -------------------------------------------------------------------------- */
-
-@keyframes blink-warning {
-    70% {
-        color: white;
-    }
-
-    to {
-        color: white;
-        background-color: orange;
-    }
-}
-
-@keyframes blink-critical {
-    70% {
-      color: white;
-    }
-
-    to {
-        color: white;
-        background-color: red;
-    }
-}
-
-
-/* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
-
-/* Reset all styles */
+/* Reset styles */
 * {
     border: none;
     border-radius: 1;
@@ -40,16 +7,17 @@
     padding: 0;
 }
 
-/* The whole bar */
+/* The  bar */
 #waybar {
     background: #282828;
     color: white;
-    font-family:  "awesome 5";
+    font-family: "awesome 5";
     font-size: 13px;
     font-weight: bold;
 }
 
-/* Each module */
+#disk,
+#backlight,
 #battery,
 #clock,
 #cpu,
@@ -58,25 +26,21 @@
 #mode,
 #network,
 #pulseaudio,
-#temperature,
 #custom-alsa,
 #tray {
     padding-left: 10px;
     padding-right: 10px;
 }
 
-
-/* -----------------------------------------------------------------------------
- * Module styles
- * -------------------------------------------------------------------------- */
-#custom-alsa {
+/*modules style*/
+#disk {
     background: #d79921;
-    color: #3b4252;
+    color: #282828;
 }
 
-#custom-keyboard-layout {
-    background: #5e81ac;
-    color: #d79921;
+#backlight {
+    background: #689d6a;
+    color: #282828;
 }
 
 #battery {
@@ -84,42 +48,28 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     background: #fbf1c7;
-    color: #434c5e;
+    color: #282828;
 }
 
 #battery.warning {
     color: orange;
 }
 
-#battery.critical {
-    color: red;
-}
-
-#battery.warning.discharging {
-    animation-name: blink-warning;
-    animation-duration: 3s;
-}
-
-#battery.critical.discharging {
-    animation-name: blink-critical;
-    animation-duration: 2s;
-}
-
 #clock.date {
     background: #d65d0e;
-    color: #e5e9f0;
+    color: #282828;
     font-weight: bold;
 }
 
 #clock.time {
     background: #eceff4;
-    color: #2e3440;
+    color: #282828;
     font-weight: bold;
 }
 
 #cpu {
     background: #af3a03;
-    color: #e5e9f0;
+    color: #282828;
 }
 
 #cpu.warning {
@@ -127,7 +77,7 @@
 }
 
 #cpu.critical {
-    color: red;
+    color: orange;
 }
 
 #memory {
@@ -135,21 +85,15 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     background: #458588;
-    color: #3b4252;
+    color: #282828;
 }
 
 #memory.warning {
     color: orange;
 }
 
-#memory.critical {
-    color: red;
-    animation-name: blink-critical;
-    animation-duration: 2s;
-}
-
 #mode {
-    background: #64727D;
+    background: #64727d;
     border-top: 2px solid white;
     /* To compensate for the top border and still have vertical centering */
     padding-bottom: 2px;
@@ -157,7 +101,7 @@
 
 #network {
     background: #98971a;
-    color: #e5e9f0;
+    color: #282828;
 }
 
 #network.disconnected {
@@ -165,24 +109,13 @@
 }
 
 #pulseaudio {
-    /* No styles */
+    background: #8f3f71;
+    color: #282828;
 }
 
 #pulseaudio.muted {
-    /* No styles */
-}
-
-#custom-spotify {
-    color: rgb(102, 220, 105);
-}
-
-#temperature {
-    background: #689d6a;
-    color: #2e3440;
-}
-
-#temperature.critical {
-    color: red;
+    background: #98971a;
+    color: #282828;
 }
 
 #tray {
@@ -194,80 +127,17 @@
 }
 
 #workspaces button {
-    /*border-top: 2px solid transparent;*/
-    /* To compensate for the top border and still have vertical centering */
     font-weight: bold;
     padding-bottom: 2px;
     padding-left: 5px;
     padding-right: 5px;
-    color: #2e3440;
-    background: #5e81ac;
+    color: #076678;
+    background: #282828;
+    border-radius: 10px;
 }
 
 #workspaces button.focused {
     font-weight: bold;
-    border-color: #4c7899;
-    color: #5e81ac;
-    background-color: #2e3440;
-}
-
-#workspaces button.urgent {
-    border-color: #c9545d;
-    color: #c9545d;
-}
-
-#custom-arrow1 {
-        font-size: 17px;
-	color: #d79921;
-	background: transparent;
-}
-#custom-arrow2 {
-        font-size: 17px;
-	color: #98971a;
-	background: #d79921
-}
-#custom-arrow3 {
-        font-size: 17px;
-	color: #458588;
-	background: #98971a
-}
-#custom-arrow4 {
-        font-size: 17px;
-	color: #af3a03;
-	background: #458588
-}
-#custom-arrow5 {
-        font-size: 17px;
-	color: #689d6a;
-	background: #af3a03
-}
-#custom-arrow6 {
-        font-size: 17px;
-	color: #fbf1c7;
-	background: #689d6a
-}
-#custom-arrow7 {
-        font-size: 17px;
-	color: #fbf1c7;
-	background: #fbf1c7
-}
-#custom-arrow8 {
-        font-size: 17px;
-	color: #d65d0e;
-	background: #fbf1c7
-}
-#custom-arrow9 {
-        font-size: 17px;
-	color: #eceff4;
-	background: #d65d0e;
-}
-#custom-arrow10 {
-        font-size: 17px;
-	color: #8f3f71;
-	background: #8f3f71;
-}
-#custom-arrow11 {
-        font-size: 17px;
-	color: #949494;
-	background: transparent;
+    color: #282828;
+    background-color: #076678;
 }

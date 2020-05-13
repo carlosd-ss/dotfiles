@@ -1,59 +1,59 @@
-// =============================================================================
-//
-// Waybar configuration
-//
-// Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
-//
-// =============================================================================
 
 {
-    // -------------------------------------------------------------------------
-    // Global configuration
-    // -------------------------------------------------------------------------
+    //GLOBAL
+
 
     "layer": "top",
 
     "position": "top",
 
-    // If height property would be not present, it'd be calculated dynamically
-    "height": 22,
-    //"width": 1366,
+   
 
     "modules-left": [
         "sway/workspaces",
-        "custom/arrow10",
         "tray"
-        //"sway/mode"
+        
+        
     ],
-    //"modules-center": [
-    //    "sway/window"
-    //],
-    "modules-right": [
-        "custom/arrow1",
-	"custom/alsa",
-        "custom/arrow2",
-        "network",
-        "custom/arrow3",
-        "memory",
-        "custom/arrow4",
-        "cpu",
-        "custom/arrow5",
-        "temperature",
-        "custom/arrow6",
-        "custom/keyboard-layout",
-        "custom/arrow7",
-        "battery",
-        "custom/arrow8",
-     
+  
+"modules-center": [
         "clock#date",
-        "custom/arrow9",
+      
         "clock#time"
     ],
+    "modules-right": [
+        
+        "network",
+        "memory",
+        "cpu",
+        "battery",
+        "disk",
+        "backlight",
+        "pulseaudio"
+    ],
+
+//MODULES
 
 
-    // -------------------------------------------------------------------------
-    // Modules
-    // -------------------------------------------------------------------------
+
+    "clock#time": {
+        "interval": 10,
+       
+        "format": "{:%H:%M}",
+        "tooltip": false
+    },
+
+
+    "clock#date": {
+        "interval": 20,
+        "format": " {:%e %b %Y}", // Icon: calendar-alt
+        //"tooltip-format": "{:%e %B %Y}"
+        "tooltip": true
+
+    },
+
+
+
 
     "battery": {
         "interval": 1,
@@ -75,19 +75,8 @@
         "tooltip": false
     },
 
-    "clock#time": {
-        "interval": 10,
-       
-        "format": "{:%H:%M}",
-        "tooltip": false
-    },
 
-    "clock#date": {
-        "interval": 20,
-        "format": " {:%e %b %Y}", // Icon: calendar-alt
-        //"tooltip-format": "{:%e %B %Y}"
-        "tooltip": false
-    },
+
 
     "cpu": {
         "interval": 5,
@@ -99,16 +88,7 @@
         }
     },
 
-    "custom/keyboard-layout": {
-      "exec": "~/layout.sh",
-      // Interval set only as a fallback, as the value is updated by signal
-      //"interval": 5,
-      "format": "{}", // Icon: keyboard
-      // Signal sent by Sway key binding (~/.config/sway/key-bindings)
-      "signal": 1, // SIGHUP
-      "tooltip": false
-    },
-
+   
     "memory": {
         "interval": 5,
         "format": " {}%", // Icon: memory
@@ -128,15 +108,11 @@
     },
 
     "sway/mode": {
-        "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
+        "format": "<span style=\"italic\">  {}</span>",
         "tooltip": true
     },
 
-    "sway/window": {
-        "format": "{}",
-        "max-length": 120
-    },
-
+    
     "sway/workspaces": {
         "all-outputs": false,
         "disable-scroll": true,
@@ -157,7 +133,7 @@
         "scroll-step": 1,
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%",
-        "format-muted": "",
+        "format-muted": "",
         "format-icons": {
             "headphones": "",
             "handsfree": "",
@@ -165,79 +141,31 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", ""]
+            "default": ["", ""]
         },
         "on-click": "pavucontrol"
     },
 
-    "temperature": {
-      "critical-threshold": 80,
-      "interval": 5,
-      "format": " {temperatureC}°C",
-      "format-icons": [
-          "", // Icon: temperature-empty
-          "", // Icon: temperature-quarter
-          "", // Icon: temperature-half
-          "", // Icon: temperature-three-quarters
-          ""  // Icon: temperature-full
-      ],
-      "tooltip": true
-    },
-
-    "custom/layout": {
-      //"format": "{}",
-      "exec": "~/layout.sh"
-    },
-
+    "disk": {
+        "interval": 5,
+        "format": " {percentage_used:2}%",
+        "path": "/"
    
-
+    },
+      "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}% ",
+        "states": [0,50],
+        "format-icons": ["", ""]
+    },
     "tray": {
         "icon-size": 22
 
         //"spacing": 10
     },
 
-    "custom/arrow1": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow2": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow3": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow4": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow5": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow6": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow7": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow8": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow9": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow10": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow11": {
+   
+    "custom/bar": {
         "format": "",
         "tooltip": false
     }

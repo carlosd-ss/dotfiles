@@ -1,5 +1,5 @@
 exec swayidle -w \
-       before-sleep 'swaylock -ef' 
+       before-sleep 'swaylock -ef -i /home/cdss/Imagens/wp/Picture.png' 
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
@@ -25,7 +25,7 @@ client.background       #ffffff
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec tilix
+    bindsym $mod+Return exec termite
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -237,26 +237,35 @@ output "*" bg  /home/cdss/Imagens/wp/Picture.png fill
 
 #-------------------------------------------------------------------------------------------
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-include /etc/sway/config.d/*
 #-------------------------------------------------------------------------------------------
 
 
 #-------------------------------------------------------------------------------------------
 default_border pixel 4
+default_floating_border pixel 4
+
+
+#hide_edge_borders smart
+#hide_edge_borders both
+
+
 
 #-------------------------------------------------------------------------------------------
-bindsym $mod+t exec thunar
+bindsym $mod+t exec caja
 bindsym $mod+c exec chromium
 bindsym $mod+m exec virt-manager
+bindsym $mod+z exec subl3
+bindsym Print exec grim
+
+
+
 #-------------------------------------------------------------------------------------------
-
-
