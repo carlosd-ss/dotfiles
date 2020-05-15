@@ -265,7 +265,7 @@ bindsym $mod+c exec chromium
 bindsym $mod+m exec virt-manager
 bindsym $mod+z exec subl3
 bindsym Print exec grim
-
+exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 
 #-------------------------------------------------------------------------------------------
