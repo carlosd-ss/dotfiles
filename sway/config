@@ -25,7 +25,7 @@ client.background       #ffffff
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec termite
+    bindsym $mod+Return exec kitty
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -267,5 +267,8 @@ bindsym $mod+z exec subl3
 bindsym Print exec grim
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
+gaps inner 10
+gaps outer 10
+smart_gaps on
 
 #-------------------------------------------------------------------------------------------
