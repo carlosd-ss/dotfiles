@@ -13,6 +13,30 @@
       "filetypes": ["dockerfile"],
       "args": ["--stdio"]
     },
+
+     "dart": {
+      "command": "dart",
+      "args": [
+        " change this to the path of analysis_server"
+        "/usr/local/opt/dart/libexec/bin/snapshots/analysis_server.dart.snapshot",
+        "--lsp",
+        "--client-id",
+        "vim",
+        "--client-version",
+        "coc.nvim",
+      ],
+      "filetypes": ["dart"],
+      "trace.server": "verbose"
+    },
+    "intelephense": {
+            "command": "intelephense",
+            "args": ["--stdio"],
+            "filetypes": ["php"],
+            "initializationOptions": {
+                "storagePath": "/tmp/intelephense"
+            }
+        },
+
     "bash": {
       "command": "bash-language-server",
       "args": ["start"],

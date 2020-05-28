@@ -17,9 +17,10 @@
     ],
   
 "modules-center": [
-        "clock#date",
+       
       
-        "clock#time"
+        "clock#time",
+         "clock#date"
     ],
     "modules-right": [
         
@@ -39,7 +40,7 @@
     "clock#time": {
         "interval": 10,
        
-        "format": "{:%H:%M}",
+        "format": " {:%H:%M}",
         "tooltip": false
     },
 

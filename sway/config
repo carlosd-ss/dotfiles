@@ -220,9 +220,14 @@ include /etc/sway/config.d/*
 
 #Keyboard
 
-input * xkb_layout "br"
-input * xkb_numlock enabled
-
+ 
+input type:keyboard {      
+	xkb_layout "br"
+	xkb_numlock enabled
+	xkb_options caps:swapescape
+    
+    
+}
 #-------------------------------------------------------------------------------------------
 
 

@@ -33,7 +33,8 @@ Plug 'posva/vim-vue'
 Plug 'turbio/bracey.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
-
+Plug 'StanAngeloff/php.vim'
+Plug '2072/PHP-Indenting-for-VIm'
 call plug#end()
 "Language
 set encoding=UTF-8
@@ -54,9 +55,8 @@ set relativenumber
 "Preview in real time
 set inccommand=split
 "Basic
+set autoindent
 set ruler
-set backspace=indent,eol,start
-set history=2000
 set noswapfile
 set autowrite
 set visualbell
@@ -71,6 +71,7 @@ nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
 "Neovim reload
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
 "Fuzzy search Files
+
 nnoremap <c-p> :Files<cr>
 "Search ocurrencys
  nnoremap <c-f> :Ag<cr>
@@ -78,14 +79,19 @@ nnoremap <c-p> :Files<cr>
 let g:UltiSnipsEditSplit="vertical"
 "Vue
 let g:UltiSnipsSnippetsDir = '~/.config/nvim/UltiSnips'
-let g:vue_pre_processors = ['pug', 'scss', 'stylus']
-
-"Go
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
+let g:vue_pre_processors = ['pug', 'scss']
 
 "Terminal
 nnoremap <leader>t :TerminalSplit zsh<cr>
+"Go
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+" Launch gopls when Go files are in use
+let g:LanguageClient_serverCommands = {
+       \ 'go': ['gopls']
+       \ }
+" Run gofmt on save
+autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
 
 "GoLang
 nnoremap<leader>gr :GoRun<CR>
@@ -93,7 +99,7 @@ nnoremap<leader>gd :GoDebugStart<CR>
 nnoremap<leader>gb :GoBuild<CR>
 
 "File
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-l> :NERDTreeToggle<CR>
 "Flutter
 nnoremap <leader>fa :FlutterRun<cr>
 nnoremap <leader>fq :FlutterQuit<cr>
