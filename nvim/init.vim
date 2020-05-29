@@ -39,6 +39,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+"Autoformat
+Plug 'Chiel92/vim-autoformat'
+
 "-----------Langs----------------------------------------------------------------------
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'posva/vim-vue'
@@ -71,9 +74,6 @@ set relativenumber
 
 "Preview in real time
 set inccommand=split
-
-"Ident
-set autoindent
 
 "Noswap
 set noswapfile
@@ -135,8 +135,7 @@ let g:LanguageClient_serverCommands = {
        \ }
 
 " Run gofmt on save
-autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
-
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 "GoLang
 nnoremap<leader>gr :GoRun<CR>
 nnoremap<leader>gd :GoDebugStart<CR>
@@ -198,4 +197,10 @@ let g:closetag_regions = {
 "
 let g:closetag_shortcut = '>'
 
-"----------------------------------------------------
+"-----------------Autoformat----------------------------------------------------
+
+"Save on format
+au BufWrite * :Autoformat
+
+"F3 Format
+noremap <F3> :Autoformat<CR>
