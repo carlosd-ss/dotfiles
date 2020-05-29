@@ -102,13 +102,42 @@ nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
 nnoremap <c-p> :Files<cr>
 
 "Search ocurrencys
- nnoremap <c-f> :Ag<cr>
+nnoremap <c-f> :Ag<cr>
 
- "--------------------------Snipets---------------------------------------
- "Snippets Conf
+
+"------------------------------Coc-nvim----------------------------------
+
+
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+			\ pumvisible() ? "\<C-n>" :
+			\ <SID>check_back_space() ? "\<Tab>" :
+			\ coc#refresh()
+
+
+"--------------------------Snipets---------------------------------------
+"Snippets Conf
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir = '~/.config/nvim/UltiSnips'
 
+
+inoremap <silent><expr> <TAB>
+			\ pumvisible() ? coc#_select_confirm() :
+			\ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+			\ <SID>check_back_space() ? "\<TAB>" :
+			\ coc#refresh()
+
+function! s:check_back_space() abort
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
 
 "-----------------------Vue----------------------------------------------
 
@@ -131,8 +160,8 @@ let g:go_info_mode='gopls'
 
 " Launch gopls when Go files are in use
 let g:LanguageClient_serverCommands = {
-       \ 'go': ['gopls']
-       \ }
+			\ 'go': ['gopls']
+			\ }
 
 " Run gofmt on save
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
@@ -189,9 +218,9 @@ let g:closetag_emptyTags_caseSensitive = 1
 " Disables auto-close if not in a "valid" region (based on filetype)
 "
 let g:closetag_regions = {
-    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
-    \ 'javascript.jsx': 'jsxRegion',
-    \ }
+			\ 'typescript.tsx': 'jsxRegion,tsxRegion',
+			\ 'javascript.jsx': 'jsxRegion',
+			\ }
 
 " Shortcut for closing tags, default is '>'
 "
