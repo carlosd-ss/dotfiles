@@ -43,13 +43,23 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Chiel92/vim-autoformat'
 
 "-----------Langs----------------------------------------------------------------------
+"Golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+"Vuejs
 Plug 'posva/vim-vue'
-Plug 'turbio/bracey.vim'
+
+"Dart
 Plug 'dart-lang/dart-vim-plugin'
+
+"Flutter
 Plug 'thosakwe/vim-flutter'
+
+"PHP
 Plug 'StanAngeloff/php.vim'
 Plug '2072/PHP-Indenting-for-VIm'
+
+"Closetag Html
 Plug 'alvan/vim-closetag'
 
 call plug#end()
@@ -62,6 +72,9 @@ set encoding=UTF-8
 let g:airline_theme='base16'
 colorscheme gruvbox
 set background=dark
+
+"Work
+set autochdir
 
 "Change files without saving
 set hidden
@@ -104,8 +117,24 @@ nnoremap <c-p> :Files<cr>
 "Search ocurrencys
 nnoremap <c-f> :Ag<cr>
 
+"Tabs
+nnoremap <c-PageUp> :tabnext<cr>
+nnoremap <c-PageDown> :tabprevious<cr>
 
-"------------------------------Coc-nvim----------------------------------
+"Tabs Split
+nnoremap <Leader>w <C-w>w
+
+"Save
+nnoremap <c-s> :w!<cr>
+
+"Undo
+nnoremap <c-z> u<cr>
+
+"Substitute all
+nnoremap <leader>su :%s/new/old/g
+
+
+"--------------------------------Coc-nvim----------------------------------
 
 
 " use <tab> for trigger completion and navigate to the next complete item
@@ -233,3 +262,9 @@ au BufWrite * :Autoformat
 
 "F3 Format
 noremap <F3> :Autoformat<CR>
+
+
+"-------------------Cursor Last file--------------------------------------
+
+
+
