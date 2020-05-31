@@ -118,8 +118,8 @@ nnoremap <c-p> :Files<cr>
 nnoremap <c-f> :Ag<cr>
 
 "Tabs
-nnoremap <c-PageUp> :tabnext<cr>
-nnoremap <c-PageDown> :tabprevious<cr>
+nnoremap <c-right> :tabnext<cr>
+nnoremap <c-left> :tabprevious<cr>
 
 "Tabs Split
 nnoremap <Leader>w <C-w>w
