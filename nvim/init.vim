@@ -271,7 +271,7 @@ endif
 
 " fzf:
 
-if exists(':Files')
+if exists(':FZF')
 	let g:fzf_colors = {}
 
 	let g:fzf_colors.fg      = ['fg', 'GruvboxFg1']
