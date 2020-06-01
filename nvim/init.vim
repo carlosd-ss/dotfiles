@@ -68,11 +68,21 @@ call plug#end()
 "Char
 set encoding=UTF-8
 
-"Theme
-let g:airline_theme='base16'
+"---------------------------Theme-------------------------
+let g:airline_theme='gruvbox'
 colorscheme gruvbox
 set background=dark
 
+" Enable 24-bit true colors if your terminal supports it.
+if (has("termguicolors"))
+	" https://github.com/vim/vim/issues/993#issuecomment-255651605
+	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+	set termguicolors
+endif
+
+"-------------------------------------------------------------
 "Work
 set autochdir
 
@@ -99,6 +109,10 @@ filetype on
 
 "Cursorline
 set cursorline
+
+"Autoident
+set autoindent
+
 
 "-----------------Leader and maps-------------------------
 
@@ -136,37 +150,20 @@ nnoremap <leader>su :%s/new/old/g
 
 "--------------------------------Coc-nvim----------------------------------
 
+"Tab confirm completion
+inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" use <tab> for trigger completion and navigate to the next complete item
-function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
+" use <c-space>for trigger completion
+inoremap <silent><expr> <c-space> coc#refresh()
 
-inoremap <silent><expr> <Tab>
-			\ pumvisible() ? "\<C-n>" :
-			\ <SID>check_back_space() ? "\<Tab>" :
-			\ coc#refresh()
-
+"Reset tab ultinips
+let g:UltiSnipsExpandTrigger = "<NUL>"
 
 "--------------------------Snipets---------------------------------------
 "Snippets Conf
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir = '~/.config/nvim/UltiSnips'
 
-
-inoremap <silent><expr> <TAB>
-			\ pumvisible() ? coc#_select_confirm() :
-			\ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-			\ <SID>check_back_space() ? "\<TAB>" :
-			\ coc#refresh()
-
-function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-let g:coc_snippet_next = '<tab>'
 
 "-----------------------Vue----------------------------------------------
 
@@ -267,4 +264,27 @@ noremap <F3> :Autoformat<CR>
 "autocmd BufEnter * lcd %:p:h
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+
+"-------------------------Fzf-----------------------------
+
+" fzf:
+
+if exists(':Files')
+	let g:fzf_colors = {}
+
+	let g:fzf_colors.fg      = ['fg', 'GruvboxFg1']
+	let g:fzf_colors.bg      = ['fg', 'GruvboxBg0']
+	let g:fzf_colors.hl      = ['fg', 'GruvboxRed']
+	let g:fzf_colors['fg+']  = ['fg', 'GruvboxGreen']
+	let g:fzf_colors['bg+']  = ['fg', 'GruvboxBg1']
+	let g:fzf_colors['hl+']  = ['fg', 'GruvboxRed']
+	let g:fzf_colors.info    = ['fg', 'GruvboxOrange']
+	let g:fzf_colors.border  = ['fg', 'GruvboxBg0']
+	let g:fzf_colors.prompt  = ['fg', 'GruvboxAqua']
+	let g:fzf_colors.pointer = ['fg', 'GruvboxOrange']
+	let g:fzf_colors.marker  = ['fg', 'GruvboxYellow']
+	let g:fzf_colors.spinner = ['fg', 'GruvboxGreen']
+	let g:fzf_colors.header  = ['fg', 'GruvboxBlue']
 endif
