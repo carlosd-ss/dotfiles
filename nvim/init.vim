@@ -168,7 +168,7 @@ let g:vue_pre_processors = ['pug', 'scss']
 "------------------------Terminal----------------------------------------
 
 "Terminal
-nnoremap <leader>t :TerminalSplit zsh<cr>
+nnoremap <leader>t :vsplit term://zsh<cr>A
 
 
 
