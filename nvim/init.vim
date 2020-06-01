@@ -69,18 +69,12 @@ call plug#end()
 set encoding=UTF-8
 
 "---------------------------Theme-------------------------
+" use real colors
+set termguicolors
 let g:airline_theme='gruvbox'
 colorscheme gruvbox
 set background=dark
-
-" Enable 24-bit true colors if your terminal supports it.
-if (has("termguicolors"))
-	" https://github.com/vim/vim/issues/993#issuecomment-255651605
-	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
-	set termguicolors
-endif
+set termguicolors
 
 "-------------------------------------------------------------
 "Work
@@ -267,24 +261,8 @@ if has("autocmd")
 endif
 
 
-"-------------------------Fzf-----------------------------
+"---------------------------------------------------------------------------
 
-" fzf:
 
-if exists(':FZF')
-	let g:fzf_colors = {}
 
-	let g:fzf_colors.fg      = ['fg', 'GruvboxFg1']
-	let g:fzf_colors.bg      = ['fg', 'GruvboxBg0']
-	let g:fzf_colors.hl      = ['fg', 'GruvboxRed']
-	let g:fzf_colors['fg+']  = ['fg', 'GruvboxGreen']
-	let g:fzf_colors['bg+']  = ['fg', 'GruvboxBg1']
-	let g:fzf_colors['hl+']  = ['fg', 'GruvboxRed']
-	let g:fzf_colors.info    = ['fg', 'GruvboxOrange']
-	let g:fzf_colors.border  = ['fg', 'GruvboxBg0']
-	let g:fzf_colors.prompt  = ['fg', 'GruvboxAqua']
-	let g:fzf_colors.pointer = ['fg', 'GruvboxOrange']
-	let g:fzf_colors.marker  = ['fg', 'GruvboxYellow']
-	let g:fzf_colors.spinner = ['fg', 'GruvboxGreen']
-	let g:fzf_colors.header  = ['fg', 'GruvboxBlue']
-endif
+
