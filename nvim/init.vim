@@ -1,7 +1,7 @@
 "--------------------------------Plugins---------------------------------------------
 call plug#begin()
 "Theme Plug
-Plug 'morhetz/gruvbox'
+Plug 'chriskempson/base16-vim'
 "Terminal
 Plug 'tc50cal/vim-terminal'
 "Multiple Cursors
@@ -50,10 +50,8 @@ set encoding=UTF-8
 "---------------------------Theme-------------------------
 " use real colors
 set termguicolors
-let g:airline_theme='gruvbox'
-colorscheme gruvbox
-set background=dark
-set termguicolors
+colorscheme base16-gruvbox-dark-medium
+let base16colorspace=256
 "-------------------------------------------------------------
 "Work
 set autochdir
