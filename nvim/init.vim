@@ -97,6 +97,8 @@ nnoremap <c-s> :w!<cr>
 nnoremap <c-z> u<cr>
 "Substitute all
 nnoremap <leader>su :%s/new/old/g
+"Lines order
+xnoremap <c-r> :sort<cr>
 "--------------------------------Coc-nvim----------------------------------
 "Tab confirm completion
 inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
@@ -191,4 +193,10 @@ endif
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-"---------------------------------------------------------------------------
+"------------------------Simbols---------------------------------------------------
+"Simbols in Lines
+set listchars=eol:⏎,tab:>·,trail:~,extends:>,precedes:<,space:·
+noremap <F4> :set list!<CR>
+inoremap <F4> <C-o>:set list!<CR>
+cnoremap <F4> <C-c>:set list!<CR>
+"---------------Multiples Cursors----------------------------------------------
