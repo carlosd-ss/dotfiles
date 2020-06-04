@@ -52,6 +52,11 @@ set encoding=UTF-8
 set termguicolors
 colorscheme base16-gruvbox-dark-medium
 let base16colorspace=256
+filetype plugin indent on
+syntax on
+highlight clear LineNr
+highlight clear SignColumn
+highlight LineNr  guifg=#444444
 "-------------------------------------------------------------
 "Work
 set autochdir
@@ -191,10 +196,3 @@ endif
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-"------------------------Simbols---------------------------------------------------
-"Simbols in Lines
-set listchars=eol:⏎,tab:>·,trail:~,extends:>,precedes:<,space:·
-noremap <F4> :set list!<CR>
-inoremap <F4> <C-o>:set list!<CR>
-cnoremap <F4> <C-c>:set list!<CR>
-"---------------Multiples Cursors----------------------------------------------
