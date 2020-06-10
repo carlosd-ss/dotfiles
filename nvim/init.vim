@@ -176,7 +176,7 @@ let g:closetag_shortcut = '>'
 function! Formatonsave()
 	:g/^$/d
 endfunction
-autocmd BufWritePre *.go,*.html,*.php,*.vim call Formatonsave()
+autocmd BufWritePre *.vim call Formatonsave()
 if Formatonsave()
 	Formatonsave()
 endif
