@@ -11,8 +11,6 @@ Plug 'sheerun/vim-polyglot'
 "Files Search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Check Code Lint
-Plug 'dense-analysis/ale'
 "Autocomplete pairs
 Plug 'jiangmiao/auto-pairs'
 "Snippets
@@ -27,8 +25,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Autoformat
-Plug 'Chiel92/vim-autoformat'
 "-----------Langs----------------------------------------------------------------------
 "Golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -52,8 +48,8 @@ set encoding=UTF-8
 set termguicolors
 colorscheme base16-gruvbox-dark-medium
 let base16colorspace=256
-filetype plugin indent on
 syntax on
+filetype plugin indent on
 highlight clear LineNr
 highlight clear SignColumn
 highlight LineNr  guifg=#444444
@@ -76,8 +72,6 @@ set autowrite
 filetype on
 "Cursorline
 set cursorline
-"Autoident
-set autoindent
 "-----------------Leader and maps-------------------------
 "Leader Key
 let mapleader="\<space>"
@@ -176,13 +170,8 @@ let g:closetag_regions = {
 			\ 'javascript.jsx': 'jsxRegion',
 			\ }
 " Shortcut for closing tags, default is '>'
-"
 let g:closetag_shortcut = '>'
 "-----------------Autoformat----------------------------------------------------
-"Save on format
-au BufWrite * :Autoformat
-"F3 Format
-noremap <F3> :Autoformat<CR>
 "Remove Blank Line
 function! Formatonsave()
 	:g/^$/d
@@ -196,8 +185,6 @@ endif
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-set wrap
-set linebreak
 "------------cursors--------------------------------------------------------
 let g:multi_cursor_use_default_mapping=0
 " Default mapping
