@@ -25,6 +25,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+"Syntax check
+Plug 'dense-analysis/ale'
+"Autoformat
+Plug 'Chiel92/vim-autoformat'
 "-----------Langs----------------------------------------------------------------------
 "Golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -123,10 +127,12 @@ let g:LanguageClient_serverCommands = {
 			\ }
 " Run gofmt on save
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+"Lint
 "GoLang
 nnoremap<leader>gr :GoRun<CR>
 nnoremap<leader>gd :GoDebugStart<CR>
 nnoremap<leader>gb :GoBuild<CR>
+nnoremap<leader>gt :GoTest<CR>
 "-------------NERDTre---------------------------------
 "File
 nnoremap <C-l> :NERDTreeToggle<CR>
