@@ -186,6 +186,8 @@ autocmd BufWritePre *.vim call Formatonsave()
 if Formatonsave()
 	Formatonsave()
 endif
+"FixEslint
+autocmd BufWritePre,BufRead *.js,*.vue :!eslint --fix
 "-------------------Cursor Last file--------------------------------------
 "autocmd BufEnter * lcd %:p:h
 if has("autocmd")
