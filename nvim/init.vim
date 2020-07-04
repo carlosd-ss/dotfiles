@@ -35,9 +35,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "Vuejs
 Plug 'posva/vim-vue'
 "Dart
-Plug 'dart-lang/dart-vim-plugin'
-"Flutter
-Plug 'thosakwe/vim-flutter'
 "PHP
 Plug 'StanAngeloff/php.vim'
 Plug '2072/PHP-Indenting-for-VIm'
@@ -136,16 +133,6 @@ nnoremap<leader>gt :GoTest<CR>
 "-------------NERDTre---------------------------------
 "File
 nnoremap <C-l> :NERDTreeToggle<CR>
-"-------------------Flutter--------------------------------
-nnoremap <leader>fa :FlutterRun<cr>
-nnoremap <leader>fq :FlutterQuit<cr>
-nnoremap <leader>fr :FlutterHotReload<cr>
-nnoremap <leader>fR :FlutterHotRestart<cr>
-nnoremap <leader>fD :FlutterVisualDebug<cr>
-let g:flutter_command="flutter"
-let g:flutter_command=1
-let g:flutter_hot_restart_on_save=0
-let g:flutter_show_log_on_run=1
 "-------HTMl----------------------------------------------------------------
 "
 "filenames like *.xml, *.html, *.xhtml, ...
