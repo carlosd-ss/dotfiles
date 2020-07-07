@@ -69,6 +69,9 @@ set inccommand=split
 set noswapfile
 "Autosave
 set autowrite
+"Autoformat
+noremap <F3> :Autoformat<CR>
+"au BufWrite * :Autoformat
 "Filetype
 filetype on
 "Cursorline
