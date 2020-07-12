@@ -28,7 +28,7 @@ Plug 'vim-airline/vim-airline-themes'
 "Syntax check
 Plug 'dense-analysis/ale'
 "Autoformat
-Plug 'Chiel92/vim-autoformat'
+Plug 'ruanyl/vim-fixmyjs'
 "-----------Langs----------------------------------------------------------------------
 "Golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -70,7 +70,7 @@ set noswapfile
 "Autosave
 set autowrite
 "Autoformat
-noremap <F3> :Autoformat<CR>
+noremap <F3> :Fixmyjs<CR>
 "au BufWrite * :Autoformat
 "Filetype
 filetype on
@@ -112,8 +112,7 @@ let g:UltiSnipsExpandTrigger = "<NUL>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir = '~/.config/nvim/UltiSnips'
 "-----------------------Vue----------------------------------------------
-"SAAS
-let g:vue_pre_processors = ['pug', 'scss']
+let g:vue_disable_pre_processors = 1
 "------------------------Terminal----------------------------------------
 "Terminal
 nnoremap <leader>t :vsplit term://zsh<cr>A
@@ -177,7 +176,7 @@ if Formatonsave()
 	Formatonsave()
 endif
 "FixEslint
-autocmd BufWritePre,BufRead *.js,*.vue :!eslint --fix
+let g:fixmyjs_engine = 'eslint'
 "-------------------Cursor Last file--------------------------------------
 "autocmd BufEnter * lcd %:p:h
 if has("autocmd")
