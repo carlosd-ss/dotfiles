@@ -1,8 +1,8 @@
 # <img src="https://github.com/carlosd-ss/dotfiles/blob/master/a.png" widht="200">
 
 ![NVIM](https://img.shields.io/badge/nvim-green)
-![SWAY](https://img.shields.io/badge/sway-%20-blue)
-![KITTY](https://img.shields.io/badge/kitty-%20-yellow)
+![SWAY](https://img.shields.io/badge/sway-blue)
+![KITTY](https://img.shields.io/badge/kitty-yellow)
 
 
 
