@@ -1,0 +1,110 @@
+
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+markup=pango
+separator_block_width=10
+#-----------------------------------------------
+
+
+[time]
+background=#d65d0e
+command=time/time
+STRFTIME_FORMAT=  %Y-%m-%d   %H:%M
+interval=5
+TZONES=$DEFAULT_TZ,Brazil/East,Australia/Brisbane,Asia/Calcutta
+TZ_LABELS=,Brazil,AU,Hyderabad
+
+#-----------------------------------------------
+[wifi]
+background=#98971a
+command=wifi/wifi
+label=  
+INTERFACE=wlp3s0
+interval=60
+
+
+#-----------------------------------------------
+
+
+[memory]
+background=#458588
+command=memory/memory
+label=   
+interval=30
+
+
+
+#-----------------------------------------------
+
+[cpu_usage]
+background=#af3a03
+command=cpu_usage/cpu_usage
+interval=10
+LABEL=  
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+
+
+#-----------------------------------------------
+[battery]
+background=#076678
+command=battery/battery
+interval=30
+LABEL=  
+#BAT_NUMBER=0
+#-----------------------------------------------
+
+
+[disk]
+background=#d79921
+command=disk/disk
+LABEL=  
+#DIR=$HOME
+#ALERT_LOW=10
+interval=30
+#-----------------------------------------------
+[backlight]
+background=#689d6a
+command=backlight/backlight
+label=  
+interval=20
+STEP_SIZE=5
+USE_SUDO=1
+
+
+#-----------------------------------------------
+
+
+[volume]
+background=#8f3f71
+command=volume/volume
+LABEL=  
+interval=once
+signal=10
+STEP=5%
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+#NATURAL_MAPPING=0
+
+
+#-----------------------------------------
+
+
+

@@ -3,7 +3,7 @@
     border: none;
     border-radius: 1;
     min-height: 0;
-    margin: 0;
+    margin: 0 10 0 0;
     padding: 0;
 }
 
@@ -12,8 +12,9 @@
     background: #282828;
     color: white;
     font-family: "awesome 5";
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
+
 }
 
 #disk,
@@ -36,6 +37,7 @@
 #disk {
     background: #d79921;
     color: #282828;
+
 }
 
 #backlight {
@@ -111,6 +113,7 @@
 #pulseaudio {
     background: #8f3f71;
     color: #282828;
+    
 }
 
 #pulseaudio.muted {
@@ -129,7 +132,7 @@
 #workspaces button {
     font-weight: bold;
     padding-bottom: 2px;
-    padding-left: 5px;
+    padding-left: 10px;
     padding-right: 5px;
     color: #076678;
     background: #282828;
