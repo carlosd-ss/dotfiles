@@ -21,4 +21,11 @@
 
 ## See the project
 
+### SWAY
+
 <img src="https://github.com/carlosdss22/dotfiles/blob/master/sway.png" height="500" widht="100">
+
+
+### I3
+
+<img src="https://github.com/carlosdss22/dotfiles/blob/master/i3.png" height="500" widht="100">
