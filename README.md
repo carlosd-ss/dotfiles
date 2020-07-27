@@ -2,6 +2,9 @@
 
 ![NVIM](https://img.shields.io/badge/nvim-green)
 ![SWAY](https://img.shields.io/badge/sway-blue)
+![WAYBAR](https://img.shields.io/badge/waybar-blue)
+![I3](https://img.shields.io/badge/i3-red)
+![I#BLOCKS](https://img.shields.io/badge/i3blocks-red)
 ![KITTY](https://img.shields.io/badge/kitty-yellow)
 
 
