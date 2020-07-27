@@ -27,8 +27,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Syntax check
 Plug 'dense-analysis/ale'
-"Autoformat
-Plug 'ruanyl/vim-fixmyjs'
 "-----------Langs----------------------------------------------------------------------
 "Golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -166,30 +164,8 @@ let g:closetag_regions = {
 			\ }
 " Shortcut for closing tags, default is '>'
 let g:closetag_shortcut = '>'
-"-----------------Autoformat----------------------------------------------------
-"Remove Blank Line
-function! Formatonsave()
-	:g/^$/d
-endfunction
-autocmd BufWritePre *.vim call Formatonsave()
-if Formatonsave()
-	Formatonsave()
-endif
-"FixEslint
-let g:fixmyjs_engine = 'eslint'
 "-------------------Cursor Last file--------------------------------------
 "autocmd BufEnter * lcd %:p:h
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-"------------cursors--------------------------------------------------------
-let g:multi_cursor_use_default_mapping=0
-" Default mapping
-let g:multi_cursor_start_word_key      = '<C-n>'
-let g:multi_cursor_select_all_word_key = '<C-q>'
-let g:multi_cursor_start_key           = 'g<C-n>'
-let g:multi_cursor_select_all_key      = 'g<C-q>'
-let g:multi_cursor_next_key            = '<C-n>'
-let g:multi_cursor_prev_key            = '<C-p>'
-let g:multi_cursor_skip_key            = '<C-x>'
-let g:multi_cursor_quit_key            = '<Esc>'
