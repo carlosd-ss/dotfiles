@@ -9,6 +9,7 @@ window {
 	margin: 5px;
 	border: none;
 	background-color: #282828;
+
 }
 
 #inner-box {
@@ -33,6 +34,7 @@ window {
 	border: none;
 	color: #98971a;
 	font-weight: bold;
+	background: transparent;
 }
 
 #entry:selected {

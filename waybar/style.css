@@ -9,7 +9,7 @@
 
 /* The  bar */
 #waybar {
-    background: #282828;
+    background: transparent;
     color: white;
     font-family: "awesome 5";
     font-size: 15px;
