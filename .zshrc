@@ -1,7 +1,23 @@
+#-----------------------------------------------------------------------------------------------------------------
+# ZSH
+#-----------------------------------------------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------------------------------------------
+# ALIAS
+#-----------------------------------------------------------------------------------------------------------------
+
+
 #start neovim
 alias vim="nvim"
-# Base16 Gruvbox dark, medium
-# Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+
+
+
+
+#-----------------------------------------------------------------------------------------------------------------
+# THEME
+#-----------------------------------------------------------------------------------------------------------------
+
 
 _gen_fzf_default_opts() {
 
@@ -30,4 +46,71 @@ _gen_fzf_default_opts() {
 	}
 
 
+
+#-----------------------------------------------------------------------------------------------------------------
+# PLUG MANAGER
+#-----------------------------------------------------------------------------------------------------------------
+
 eval "$(starship init zsh)"
+
+[[ ! -d "$HOME/.antigen" ]] && git clone https://github.com/zsh-users/antigen.git "$HOME/.antigen"
+source "$HOME/.antigen/antigen.zsh"
+
+
+#-----------------------------------------------------------------------------------------------------------------
+# PLUGS THEME
+#-----------------------------------------------------------------------------------------------------------------
+
+antigen bundle chrissicool/zsh-256color
+antigen bundle gretzky/auto-color-ls
+antigen bundle ael-code/zsh-colored-man-pages
+antigen bundle zpm-zsh/colors
+antigen bundle zdharma/fast-syntax-highlighting
+
+
+
+#-----------------------------------------------------------------------------------------------------------------
+# PLUGS UTILS
+#-----------------------------------------------------------------------------------------------------------------
+
+# Set the default plugin repo to be zsh-utils
+antigen use belak/zsh-utils
+
+# Specify completions we want before the completion module
+antigen bundle zsh-users/zsh-completions
+
+# Specify plugins we want
+antigen bundle editor
+antigen bundle history
+antigen bundle prompt
+antigen bundle utility
+antigen bundle completion
+
+# Load everything
+antigen apply
+
+# Set any settings or overrides here
+prompt belak
+bindkey -e
+
+zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'
+
+
+#-----------------------------------------------------------------------------------------------------------------
+# PLUGS SEARCH
+#-----------------------------------------------------------------------------------------------------------------
+
+antigen bundle matthieusb/zsh-sdkman
+antigen bundle marlonrichert/zsh-autocomplete
+
+
+
+
+
+
+
+
+
+
+
+
