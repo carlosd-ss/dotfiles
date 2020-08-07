@@ -32,3 +32,18 @@
 ### I3
 
 <img src="https://github.com/carlosdss22/dotfiles/blob/master/i3.png" height="500" widht="100">
+
+
+
+
+### NVIM
+
+<img src="https://github.com/carlosdss22/dotfiles/blob/master/neovim-logo-shadow.png" height="500" widht="100">
+
+
+#### DEPENDENCES
+
+```zsh
+
+ :CocInstall coc-tabnine coc-yaml coc-snippets coc-highlight coc-html  coc-tsserver coc-css coc-vetur coc-json coc-pairs coc-pairs  coc-go coc-phpls coc-sql coc-fzf-preview
+```
