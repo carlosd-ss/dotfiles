@@ -45,5 +45,5 @@
 
 ```zsh
 
- :CocInstall coc-tabnine coc-yaml coc-snippets coc-highlight coc-html  coc-tsserver coc-css coc-vetur coc-json coc-pairs coc-pairs  coc-go coc-phpls coc-sql coc-fzf-preview
+ :CocInstall coc-tabnine coc-yaml coc-snippets coc-highlight coc-html  coc-tsserver coc-css coc-vetur coc-json coc-pairs coc-pairs  coc-go coc-phpls coc-sql coc-fzf-preview coc-eslint coc-tslint-plugin
 ```

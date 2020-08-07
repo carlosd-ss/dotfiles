@@ -63,11 +63,29 @@ call plug#begin()
 
 	"Golang
 	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+	
+	"JS
+	Plug 'pangloss/vim-javascript'
+	Plug 'leafgarland/typescript-vim'
+	Plug 'peitalin/vim-jsx-typescript'
+	Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+	
+	"PHP
+	Plug '2072/PHP-Indenting-for-VIm'
+	Plug 'StanAngeloff/php.vim'
 
+"------------------------------------------------------------------------------------
+" FRAMEWORKS PLUGS
+"------------------------------------------------------------------------------------
 
-
-
-
+	"Vue
+	Plug 'posva/vim-vue'
+	
+	"Laravel
+	Plug 'tpope/vim-projectionist'        
+	Plug 'noahfrederick/vim-composer'     
+	Plug 'noahfrederick/vim-laravel'
+	
 "------------------------------------------------------------------------------------
 " 
 "------------------------------------------------------------------------------------
@@ -174,14 +192,6 @@ call plug#end()
 "------------------------------------------------------------------------------------
 " SNIPS
 "------------------------------------------------------------------------------------
-	"Tab confirm completion
-	inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-	" use <c-space>for trigger completion
-	inoremap <silent><expr> <c-space> coc#refresh()
-	"Reset tab ultinips
-	let g:UltiSnipsExpandTrigger = "<NUL>"
-
-
 	"Snippets Conf
 	let g:UltiSnipsEditSplit="vertical"
 	let g:UltiSnipsSnippetsDir = '~/.config/nvim/UltiSnips'
@@ -191,11 +201,13 @@ call plug#end()
 " LANGS CONFIG
 "------------------------------------------------------------------------------------
 
+"-----------------------JS----------------------------------------------
+	autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+	autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
 "-----------------------VUE----------------------------------------------
+	
 	let g:vue_disable_pre_processors = 1
-
-
-
 
 "----------------------GOLANG------------------------------------------------
 
@@ -208,10 +220,6 @@ call plug#end()
 	" Run gofmt on save
 	autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
-
-
-
-
 "------------------------------------------------------------------------------------
 " FILES AND LINT
 "------------------------------------------------------------------------------------
@@ -221,7 +229,7 @@ call plug#end()
 
 
 	"Ale
-	nnoremap <F9> :ALEFix prettier<cr>
+	nnoremap <F9> :ALEFix<cr>
 	" ESLint fix
 	let g:ale_fixers = {}
 	let g:ale_fixers.javascript = ['eslint']
