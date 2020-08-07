@@ -38,7 +38,7 @@
 
 ### NVIM
 
-<img src="https://github.com/carlosdss22/dotfiles/blob/master/neovim-logo-shadow.png" height="500" widht="100">
+<img src="https://github.com/carlosdss22/dotfiles/blob/master/neovim-logo-shadow.png" height="100" widht="100">
 
 
 #### DEPENDENCES
