@@ -97,13 +97,12 @@ call plug#end()
 
     " use real colors
     set termguicolors
-
-    colorscheme base16-gruvbox-dark-medium
+     
+    "Theme and BG
+    colorscheme base16-gruvbox-dark-hard
     let base16colorspace=256
-    
-    highlight clear LineNr
-    highlight clear SignColumn
-    highlight LineNr  guifg=#444444
+    set background=dark
+
 
 "------------------------------------------------------------------------------------
 " PREFERENCES
@@ -145,6 +144,10 @@ call plug#end()
     set expandtab
     retab
     
+    "Line numbers color
+    highlight clear LineNr
+    highlight clear SignColumn
+    highlight LineNr  guifg=#444444
 
 "------------------------------------------------------------------------------------
 " MAPS
