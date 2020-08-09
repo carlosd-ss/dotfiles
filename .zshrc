@@ -101,6 +101,7 @@ zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'
 
 antigen bundle matthieusb/zsh-sdkman
 antigen bundle marlonrichert/zsh-autocomplete
+antigen bundle zsh-users/zsh-completions
 
 
 
