@@ -62,7 +62,6 @@ source "$HOME/.antigen/antigen.zsh"
 #-----------------------------------------------------------------------------------------------------------------
 
 antigen bundle chrissicool/zsh-256color
-antigen bundle gretzky/auto-color-ls
 antigen bundle ael-code/zsh-colored-man-pages
 antigen bundle zpm-zsh/colors
 antigen bundle zdharma/fast-syntax-highlighting
