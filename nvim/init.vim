@@ -178,6 +178,9 @@ call plug#end()
     "Save
     nnoremap <c-s> :w!<cr>
 
+    "Quit
+    nnoremap <c-q> :q!<cr>
+    
     "Undo
     nnoremap <c-z> u<cr>
 
