@@ -104,6 +104,10 @@ antigen bundle marlonrichert/zsh-autocomplete
 antigen bundle zsh-users/zsh-completions
 
 
+#Folder
+setopt auto_cd
+
+
 
 
 
