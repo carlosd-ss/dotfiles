@@ -194,9 +194,13 @@ call plug#end()
     nnoremap <c-a> ggVGy
 
     "Duplicate Line
-    nnoremap <c-d> <esc>:t.<cr>
+    nnoremap <c-d> :t.<cr>
 
-"------------------------------------------------------------------------------------
+    "Comment Code
+    nmap <C-_>   <Plug>NERDCommenterToggle
+    xmap <C-_>   <Plug>NERDCommenterToggle<CR>
+
+    "------------------------------------------------------------------------------------
 " SNIPS
 "------------------------------------------------------------------------------------
     
