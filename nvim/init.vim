@@ -139,6 +139,7 @@ call plug#end()
     set tabstop=4
     set expandtab
     retab
+    set sw=4
     
     "Line numbers color
     highlight clear LineNr
