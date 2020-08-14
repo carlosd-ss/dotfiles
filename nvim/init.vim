@@ -70,7 +70,6 @@ call plug#begin()
     Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
     
     "PHP
-    Plug '2072/PHP-Indenting-for-VIm'
     Plug 'StanAngeloff/php.vim'
 
 "------------------------------------------------------------------------------------
@@ -87,7 +86,8 @@ call plug#begin()
 "------------------------------------------------------------------------------------
 " 
 "------------------------------------------------------------------------------------
-
+command! -nargs=1 Silent execute ':silent !'.<q-args> | execute ':redraw!'
+map <c-m> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=symfony<cr>
 call plug#end()
 
 "------------------------------------------------------------------------------------
