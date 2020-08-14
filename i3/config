@@ -261,6 +261,5 @@ exec_always --no-startup-id feh --bg-fill /home/cdss/Imagens/wp/Picture.jpg
 #---------------------------------------------------------------------------------------------------
 
 # swap caps lock and escape
-exec_always --no-startup-id xmodmap -e "clear lock"
-exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
-exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+exec_always --no-startup-id setxkbmap -option caps:swapescape "vimscape"
+

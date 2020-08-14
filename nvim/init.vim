@@ -174,30 +174,12 @@ call plug#end()
     "Tabs Split
     nnoremap <Leader>w <C-w>w
 
-    "Save
-    nnoremap <c-s> :w!<cr>
-
-    "Quit
-    nnoremap <c-e> :q!<cr>
-    
-    "Undo
-    nnoremap <c-z> u<cr>
-
     "Substitute all
     nnoremap <leader>su :%s/new/old/g
-
-    "Lines order
-    xnoremap <c-r> :sort<cr>
 
     "Terminal
     nnoremap <leader>t :vsplit term://zsh<cr>A
         
-    "Select and Copy all(vim)
-    nnoremap <c-a> ggVGy
-
-    "Duplicate Line
-    nnoremap <c-d> :t.<cr>
-
     "Comment Code
     nmap <C-_>   <Plug>NERDCommenterToggle
     xmap <C-_>   <Plug>NERDCommenterToggle<CR>
