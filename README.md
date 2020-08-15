@@ -1,9 +1,5 @@
 # <img src="https://github.com/carlosd-ss/dotfiles/blob/master/.github/a.png" widht="200">
 
-
-
-
-
 ## Installation
 
 
@@ -28,6 +24,7 @@
 ### I3
 ![I3](https://img.shields.io/badge/WM-I3-%2320444D?style=for-the-badge)
 ![I#BLOCKS](https://img.shields.io/badge/BAR-I3BLOCKS-%2320444D?style=for-the-badge)
+
 <img src="https://github.com/carlosdss22/dotfiles/blob/master/.github/i3.png" height="500" widht="100">
 
 
