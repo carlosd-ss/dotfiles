@@ -34,7 +34,7 @@
 
 
 ### NVIM
-![NVIM](https://img.shields.io/badge/EOVIM-%23444444?style=for-the-badge&logo=Neovim&logoColor=white)
+![NVIM](https://img.shields.io/badge/EOVIM-%2357A143?style=for-the-badge&logo=Neovim&labelColor=%23444444)
 ![KITTY](https://img.shields.io/badge/TERMINAL-KITTY-%23784421?style=for-the-badge)
 
 <img src="https://github.com/carlosdss22/dotfiles/blob/master/.github/neovim-logo-shadow.png" height="100" widht="100">
