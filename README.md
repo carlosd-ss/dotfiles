@@ -15,15 +15,15 @@
 ## See the project
 
 ### SWAY
-![SWAY](https://img.shields.io/badge/WM-SWAY-%2368751C?style=for-the-badge)
-![WAYBAR](https://img.shields.io/badge/BAR-WAYBAR-%2368751C?style=for-the-badge)
+![SWAY](https://img.shields.io/badge/WM-SWAY-%2368751C?style=for-the-badge&labelColor=%23444444)
+![WAYBAR](https://img.shields.io/badge/BAR-WAYBAR-%2368751C?style=for-the-badge&labelColor=%23444444)
 
 <img src="https://github.com/carlosdss22/dotfiles/blob/master/.github/sway.png" height="500" widht="100">
 
 
 ### I3
-![I3](https://img.shields.io/badge/WM-I3-%2320444D?style=for-the-badge)
-![I#BLOCKS](https://img.shields.io/badge/BAR-I3BLOCKS-%2320444D?style=for-the-badge)
+![I3](https://img.shields.io/badge/WM-I3-%2320444D?style=for-the-badge&labelColor=%23444444)
+![I#BLOCKS](https://img.shields.io/badge/BAR-I3BLOCKS-%2320444D?style=for-the-badge&labelColor=%23444444)
 
 <img src="https://github.com/carlosdss22/dotfiles/blob/master/.github/i3.png" height="500" widht="100">
 
@@ -31,8 +31,8 @@
 
 
 ### NVIM
-![NVIM](https://img.shields.io/badge/NEOVIM-%2357A143?style=for-the-badge&logo=Neovim&labelColor=%23555555)
-![KITTY](https://img.shields.io/badge/TERMINAL-KITTY-%23784421?style=for-the-badge)
+![NVIM](https://img.shields.io/badge/NEOVIM-%2357A143?style=for-the-badge&logo=Neovim&labelColor=%23444444)
+![KITTY](https://img.shields.io/badge/TERMINAL-KITTY-%23784421?style=for-the-badge&labelColor=%23444444)
 
 <img src="https://github.com/carlosdss22/dotfiles/blob/master/.github/neovim-logo-shadow.png" height="100" widht="100">
 
