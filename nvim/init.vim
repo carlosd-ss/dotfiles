@@ -44,6 +44,7 @@ call plug#begin()
 "------------------------------------------------------------------------------------
 " FEATURES - 
 "------------------------------------------------------------------------------------
+
     "Terminal
     Plug 'tc50cal/vim-terminal'
 
@@ -62,37 +63,17 @@ call plug#begin()
 
     "Golang
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-    
-    "JS
-    Plug 'pangloss/vim-javascript'
-    Plug 'leafgarland/typescript-vim'
-    Plug 'peitalin/vim-jsx-typescript'
-    Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-    
-    "PHP
-    Plug 'StanAngeloff/php.vim'
 
-"------------------------------------------------------------------------------------
-" FRAMEWORKS PLUGS
-"------------------------------------------------------------------------------------
-
-    "Vue
-    Plug 'posva/vim-vue'
     
-    "Laravel
-    Plug 'tpope/vim-projectionist'        
-    Plug 'noahfrederick/vim-composer'     
-    Plug 'noahfrederick/vim-laravel'
 "------------------------------------------------------------------------------------
 " 
 "------------------------------------------------------------------------------------
-command! -nargs=1 Silent execute ':silent !'.<q-args> | execute ':redraw!'
-map <c-m> <esc>:w<cr>:Silent php-cs-fixer fix %:p --level=symfony<cr>
 call plug#end()
 
 "------------------------------------------------------------------------------------
 " COLORS
 "------------------------------------------------------------------------------------
+
     " use real colors
     set termguicolors
      
@@ -100,9 +81,11 @@ call plug#end()
     colorscheme base16-gruvbox-dark-hard
     let base16colorspace=256
     set background=dark
+
 "------------------------------------------------------------------------------------
 " PREFERENCES
 "------------------------------------------------------------------------------------
+
     "Char
     set encoding=UTF-8
     
@@ -148,6 +131,7 @@ call plug#end()
  
     "Fast Scrolling  
      set ttyfast
+
 "------------------------------------------------------------------------------------
 " MAPS
 "------------------------------------------------------------------------------------
@@ -210,15 +194,11 @@ call plug#end()
 
     let g:closetag_emptyTags_caseSensitive = 1
 
-"-----------------------JS----------------------------------------------
-    
-    autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-    autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 "-----------------------VUE----------------------------------------------
     
-    let g:vue_disable_pre_processors = 1
     autocmd FileType vue let b:coc_pairs_disabled = ['<']
+
 "----------------------GOLANG------------------------------------------------
 
     let g:go_def_mode='gopls'
@@ -250,3 +230,7 @@ call plug#end()
     if has("autocmd")
         au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
     endif
+
+"------------------------------------------------------------------------------------
+" 
+"------------------------------------------------------------------------------------
