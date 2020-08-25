@@ -25,7 +25,7 @@ separator_block_width=10
 background=#d65d0e
 command=time/time
 STRFTIME_FORMAT=  %Y-%m-%d   %H:%M
-interval=5
+interval=1
 TZONES=$DEFAULT_TZ,Brazil/East,Australia/Brisbane,Asia/Calcutta
 TZ_LABELS=,Brazil,AU,Hyderabad
 
@@ -35,7 +35,7 @@ background=#98971a
 command=wifi/wifi
 label=  
 INTERFACE=wlp3s0
-interval=60
+interval=1
 
 
 #-----------------------------------------------
@@ -45,7 +45,7 @@ interval=60
 background=#458588
 command=memory/memory
 label=   
-interval=30
+interval=1
 
 
 
@@ -54,7 +54,7 @@ interval=30
 [cpu_usage]
 background=#af3a03
 command=cpu_usage/cpu_usage
-interval=10
+interval=1
 LABEL=  
 #min_width=CPU: 100.00%
 #T_WARN=50
@@ -66,7 +66,7 @@ LABEL= 
 [battery]
 background=#076678
 command=battery/battery
-interval=30
+interval=1
 LABEL=  
 #BAT_NUMBER=0
 #-----------------------------------------------
@@ -78,15 +78,15 @@ command=disk/disk
 LABEL=  
 #DIR=$HOME
 #ALERT_LOW=10
-interval=30
+interval=1
 #-----------------------------------------------
 [backlight]
 background=#689d6a
 command=backlight/backlight
 label=  
-interval=20
-STEP_SIZE=5
-USE_SUDO=1
+interval=1
+STEP_SIZE=1
+USE_SUDO=0
 
 
 #-----------------------------------------------
@@ -96,7 +96,7 @@ USE_SUDO=1
 background=#8f3f71
 command=volume/volume
 LABEL=  
-interval=once
+interval=1
 signal=10
 STEP=5%
 #MIXER=[determined automatically]
