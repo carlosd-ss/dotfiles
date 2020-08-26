@@ -71,7 +71,7 @@ call plug#begin()
     
     "JS
 
-    Plug 'storyn26383/vim-vue'
+    Plug 'leafOfTree/vim-vue-plugin'
     Plug 'cakebaker/scss-syntax.vim'
     Plug 'iloginow/vim-stylus'
     Plug 'yuezk/vim-js'
@@ -227,7 +227,12 @@ call plug#end()
 "-----------------------VUE----------------------------------------------
     
     autocmd FileType vue let b:coc_pairs_disabled = ['<']
-    let g:vue_pre_processors = ['saas', 'scss', 'stylus']
+    let g:vim_vue_plugin_load_full_syntax = 1
+    let g:vim_vue_plugin_highlight_vue_keyword= 1
+    let g:vim_vue_plugin_use_stylus= 1
+    let g:vim_vue_plugin_highlight_vue_attr	= 1
+    let g:vim_vue_plugin_use_scss= 1
+    let g:vim_vue_plugin_use_sass= 1
 
 "----------------------GOLANG------------------------------------------------
 
@@ -260,7 +265,6 @@ call plug#end()
     let g:go_highlight_variable_assignments = 1
     let g:go_highlight_diagnostic_errors = 1
     let g:go_highlight_diagnostic_warnings = 1
-
 "------------------------------------------------------------------------------------
 " FILES AND LINT
 "------------------------------------------------------------------------------------
