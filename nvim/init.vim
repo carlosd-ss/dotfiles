@@ -5,13 +5,12 @@ call plug#begin()
 "------------------------------------------------------------------------------------
 "THEME AND INTERFACE
 "------------------------------------------------------------------------------------
-
     "Gruvbox
-    Plug 'chriskempson/base16-vim'
+    Plug 'morhetz/gruvbox'
 
     "Syntax  Highlighting
     Plug 'sheerun/vim-polyglot'
-
+    
     "Airline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -54,6 +53,12 @@ call plug#begin()
     "Closetag HTML
     Plug 'alvan/vim-closetag'
     
+    "Color Pairs
+    Plug 'luochen1990/rainbow'
+    
+    "Ident 
+    Plug 'Yggdroot/indentLine'   
+    
     "Comment
     Plug 'preservim/nerdcommenter'
 
@@ -63,8 +68,17 @@ call plug#begin()
 
     "Golang
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
     
+    "JS
+
+    Plug 'storyn26383/vim-vue'
+    Plug 'cakebaker/scss-syntax.vim'
+    Plug 'iloginow/vim-stylus'
+    Plug 'yuezk/vim-js'
+    Plug 'maxmellon/vim-jsx-pretty'
+    Plug 'leafgarland/typescript-vim'
+
+
 "------------------------------------------------------------------------------------
 " 
 "------------------------------------------------------------------------------------
@@ -76,11 +90,23 @@ call plug#end()
 
     " use real colors
     set termguicolors
-     
     "Theme and BG
-    colorscheme base16-gruvbox-dark-hard
-    let base16colorspace=256
+    colorscheme gruvbox
     set background=dark
+     let g:gruvbox_contrast_dark='hard'
+
+    "Color Pairs
+    let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+    let g:rainbow_conf = {
+    \   'guifgs': ['#d65d0e','#cc241d','#458588', '#d79921','#98971a','#b16286', '#689d6a'],
+    \}
+
+    "Ident
+    let g:indentLine_color_term = 239
+    let g:indentLine_color_tty_light = 7 " (default: 4)
+    let g:indentLine_color_dark = 1 " (default: 2)
+    let g:indentLine_char_list = ['|', '¦', '┆', '｜']
+    let g:indentLine_color_gui = '#434C5E'
 
 "------------------------------------------------------------------------------------
 " PREFERENCES
@@ -167,6 +193,9 @@ call plug#end()
     "Comment Code
     nmap <C-_>   <Plug>NERDCommenterToggle
     xmap <C-_>   <Plug>NERDCommenterToggle<CR>
+    
+    "Coc Autocomplete
+    inoremap <silent><expr> <c-space> coc#refresh()
 
 "------------------------------------------------------------------------------------
 " SNIPS
@@ -198,6 +227,7 @@ call plug#end()
 "-----------------------VUE----------------------------------------------
     
     autocmd FileType vue let b:coc_pairs_disabled = ['<']
+    let g:vue_pre_processors = ['saas', 'scss', 'stylus']
 
 "----------------------GOLANG------------------------------------------------
 
@@ -210,12 +240,34 @@ call plug#end()
     " Run gofmt on save
     autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
+    let g:go_fold_enable = ['block', 'import', 'varconst', 'package_comment']
+    let g:go_highlight_array_whitespace_error = 1
+    let g:go_highlight_chan_whitespace_error = 1
+    let g:go_highlight_extra_types = 1
+    let g:go_highlight_space_tab_error = 1
+    let g:go_highlight_trailing_whitespace_error = 1
+    let g:go_highlight_operators = 1
+    let g:go_highlight_functions = 1
+    let g:go_highlight_function_parameters = 1
+    let g:go_highlight_function_calls = 1
+    let g:go_highlight_types = 1
+    let g:go_highlight_fields = 1
+    let g:go_highlight_build_constraints = 1
+    let g:go_highlight_generate_tags = 1
+    let g:go_highlight_string_spellcheck = 1
+    let g:go_highlight_format_strings = 1
+    let g:go_highlight_variable_declarations = 1
+    let g:go_highlight_variable_assignments = 1
+    let g:go_highlight_diagnostic_errors = 1
+    let g:go_highlight_diagnostic_warnings = 1
+
 "------------------------------------------------------------------------------------
 " FILES AND LINT
 "------------------------------------------------------------------------------------
 
     "File
     nnoremap <C-l> :NERDTreeToggle<CR>
+    let NERDTreeShowHidden=1
 
     "Ale
     nnoremap <F9> :ALEFix<cr>
@@ -234,3 +286,5 @@ call plug#end()
 "------------------------------------------------------------------------------------
 " 
 "------------------------------------------------------------------------------------
+
+
