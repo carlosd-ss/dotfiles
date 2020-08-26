@@ -255,7 +255,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 #---------------------------------------------------------------------------------------------------
-exec_always --no-startup-id feh --bg-fill /home/cdss/Imagens/wp/Picture.jpg
+exec_always --no-startup-id feh --bg-fill /home/cdss/Imagens/wp/Picture.png
 
 
 #---------------------------------------------------------------------------------------------------
