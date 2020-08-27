@@ -261,5 +261,5 @@ exec_always --no-startup-id feh --bg-fill /home/cdss/Imagens/wp/Picture.png
 #---------------------------------------------------------------------------------------------------
 
 # swap caps lock and escape
-exec_always --no-startup-id setxkbmap -option caps:swapescape
+exec_always setxkbmap -option caps:swapescape
 
