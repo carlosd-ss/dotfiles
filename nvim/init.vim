@@ -88,13 +88,18 @@ call plug#end()
 " COLORS
 "------------------------------------------------------------------------------------
 
-    " use real colors
-    set termguicolors
+    
     "Theme and BG
     colorscheme gruvbox
     set background=dark
-     let g:gruvbox_contrast_dark='hard'
-
+    let g:gruvbox_contrast_dark='hard'
+    
+    "Airline"
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#formatter = 'unique_tail'
+    let g:airline#extensions#tabline#left_sep = ' '
+    let g:airline#extensions#tabline#left_alt_sep = '|'
+    
     "Color Pairs
     let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
     let g:rainbow_conf = {
@@ -115,6 +120,9 @@ call plug#end()
     "Char
     set encoding=UTF-8
     
+    "Use real colors
+    set termguicolors
+    
     "Change files without saving
     set hidden
     
@@ -129,6 +137,9 @@ call plug#end()
     
     "Noswap
     set noswapfile
+    set nobackup
+    set nowritebackup
+    set noundofile   
     
     "Autosave
     set autowrite
@@ -196,6 +207,12 @@ call plug#end()
     
     "Coc Autocomplete
     inoremap <silent><expr> <c-space> coc#refresh()
+    
+    "Move Lines
+    nnoremap <S-Up> :m-2<CR>
+    nnoremap <S-Down> :m+<CR>
+    inoremap <S-Up> <Esc>:m-2<CR>
+    inoremap <S-Down> <Esc>:m+<CR>
 
 "------------------------------------------------------------------------------------
 " SNIPS
@@ -230,7 +247,7 @@ call plug#end()
     let g:vim_vue_plugin_load_full_syntax = 1
     let g:vim_vue_plugin_highlight_vue_keyword= 1
     let g:vim_vue_plugin_use_stylus= 1
-    let g:vim_vue_plugin_highlight_vue_attr	= 1
+    let g:vim_vue_plugin_highlight_vue_attr = 1
     let g:vim_vue_plugin_use_scss= 1
     let g:vim_vue_plugin_use_sass= 1
 
