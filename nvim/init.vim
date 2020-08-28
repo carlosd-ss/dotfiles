@@ -168,7 +168,9 @@ call plug#end()
  
     "Fast Scrolling  
      set ttyfast
-
+    "Terminal
+    set splitright
+    set splitbelow
 "------------------------------------------------------------------------------------
 " MAPS
 "------------------------------------------------------------------------------------
@@ -259,7 +261,7 @@ call plug#end()
     
 
     "Maps
-    nnoremap <F11> :GoRun<cr>
+    nnoremap <F11> :split term://go run ./main.go<cr>10<c-w>-<c-w>w
     nnoremap <leader>gj :CocCommand go.tags.add<cr>
     nnoremap <leader>cj :CocCommand go.tags.clear<cr>
     nnoremap <leader>gt :CocCommand go.test.generate.file<cr>
