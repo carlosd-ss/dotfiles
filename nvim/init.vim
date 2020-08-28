@@ -43,10 +43,10 @@ call plug#begin()
 "------------------------------------------------------------------------------------
 " FEATURES - 
 "------------------------------------------------------------------------------------
-
-    "Terminal
-    Plug 'tc50cal/vim-terminal'
-
+    
+"Terminal
+    Plug 'vimlab/split-term.vim'
+    
     "Syntax check
     Plug 'dense-analysis/ale'
     
@@ -169,6 +169,9 @@ call plug#end()
     "Fast Scrolling  
      set ttyfast
 
+    "Terminal
+     set splitbelow
+
 "------------------------------------------------------------------------------------
 " MAPS
 "------------------------------------------------------------------------------------
@@ -199,8 +202,11 @@ call plug#end()
     nnoremap <leader>su :%s/new/old/g
 
     "Terminal
-    nnoremap <leader>t :vsplit term://zsh<cr>A
-        
+    nnoremap <leader>t  :Term<cr>
+    augroup zsh | au!
+        au TermOpen * if &buftype ==# 'terminal' | resize 10 | endif
+    augroup end
+
     "Comment Code
     nmap <C-_>   <Plug>NERDCommenterToggle
     xmap <C-_>   <Plug>NERDCommenterToggle<CR>
@@ -208,6 +214,7 @@ call plug#end()
     "Coc Autocomplete
     inoremap <silent><expr> <c-space> coc#refresh()
     nnoremap <leader>c :CocCommand<cr>
+    
     "Move Lines
     nnoremap <S-Up> :m-2<CR>
     nnoremap <S-Down> :m+<CR>
@@ -278,6 +285,7 @@ call plug#end()
     let g:go_highlight_variable_assignments = 1
     let g:go_highlight_diagnostic_errors = 1
     let g:go_highlight_diagnostic_warnings = 1
+
 "------------------------------------------------------------------------------------
 " FILES AND LINT
 "------------------------------------------------------------------------------------
