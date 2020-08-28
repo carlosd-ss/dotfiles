@@ -207,7 +207,6 @@ call plug#end()
     
     "Coc Autocomplete
     inoremap <silent><expr> <c-space> coc#refresh()
-    nnoremap <leader>c :CocCommand<cr>
     
     "Move Lines
     nnoremap <S-Up> :m-2<CR>
@@ -261,9 +260,9 @@ call plug#end()
 
     "Maps
     nnoremap <F11> :GoRun<cr>
-    nnoremap <leader>gt :CocCommand go.tags.add<cr>
-    nnoremap <leader>ct :CocCommand go.tags.clear<cr>
-    nnoremap <leader>tg :CocCommand go.test.generate.file<cr>
+    nnoremap <leader>gj :CocCommand go.tags.add<cr>
+    nnoremap <leader>cj :CocCommand go.tags.clear<cr>
+    nnoremap <leader>gt :CocCommand go.test.generate.file<cr>
 
     "Syntax Highlighting
     let g:go_fold_enable = ['block', 'import', 'varconst', 'package_comment']
