@@ -207,7 +207,7 @@ call plug#end()
     
     "Coc Autocomplete
     inoremap <silent><expr> <c-space> coc#refresh()
-    
+    nnoremap <leader>c :CocCommand<cr>
     "Move Lines
     nnoremap <S-Up> :m-2<CR>
     nnoremap <S-Down> :m+<CR>
@@ -253,15 +253,11 @@ call plug#end()
 
 "----------------------GOLANG------------------------------------------------
 
-    let g:go_def_mode='gopls'
-    let g:go_info_mode='gopls'
-    " Launch gopls when Go files are in use
-    let g:LanguageClient_serverCommands = {
-                \ 'go': ['gopls']
-                \ }
     " Run gofmt on save
     autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
-
+    let g:go_fmt_command = "goimports"
+    
+    "Syntax Highlighting
     let g:go_fold_enable = ['block', 'import', 'varconst', 'package_comment']
     let g:go_highlight_array_whitespace_error = 1
     let g:go_highlight_chan_whitespace_error = 1
