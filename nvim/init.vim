@@ -169,9 +169,6 @@ call plug#end()
     "Fast Scrolling  
      set ttyfast
 
-    "Terminal
-     set splitbelow
-
 "------------------------------------------------------------------------------------
 " MAPS
 "------------------------------------------------------------------------------------
@@ -202,10 +199,7 @@ call plug#end()
     nnoremap <leader>su :%s/new/old/g
 
     "Terminal
-    nnoremap <leader>t  :Term<cr>
-    augroup zsh | au!
-        au TermOpen * if &buftype ==# 'terminal' | resize 10 | endif
-    augroup end
+    nnoremap <leader>te :VTerm<cr>
 
     "Comment Code
     nmap <C-_>   <Plug>NERDCommenterToggle
@@ -264,6 +258,13 @@ call plug#end()
     autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
     let g:go_fmt_command = "goimports"
     
+
+    "Maps
+    nnoremap <F11> :GoRun<cr>
+    nnoremap <leader>gt :CocCommand go.tags.add<cr>
+    nnoremap <leader>ct :CocCommand go.tags.clear<cr>
+    nnoremap <leader>tg :CocCommand go.test.generate.file<cr>
+
     "Syntax Highlighting
     let g:go_fold_enable = ['block', 'import', 'varconst', 'package_comment']
     let g:go_highlight_array_whitespace_error = 1
