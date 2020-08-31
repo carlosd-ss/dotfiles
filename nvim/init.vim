@@ -261,7 +261,7 @@ call plug#end()
     
 
     "Maps
-    nnoremap <F11> :split term://go run ./main.go<cr>10<c-w>-<c-w>w
+    nnoremap <F11> :tabnew Go<cr>:VTerm<cr>go run ./main.go<cr>
     nnoremap <leader>gj :CocCommand go.tags.add<cr>
     nnoremap <leader>cj :CocCommand go.tags.clear<cr>
     nnoremap <leader>gt :CocCommand go.test.generate.file<cr>
