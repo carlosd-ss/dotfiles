@@ -201,7 +201,8 @@ call plug#end()
     nnoremap <leader>su :%s/new/old/g
 
     "Terminal
-    nnoremap <leader>te :VTerm<cr>
+    nnoremap <leader>ts :VTerm<cr>
+    nnoremap <leader>tv :Term<cr>
 
     "Comment Code
     nmap <C-_>   <Plug>NERDCommenterToggle
@@ -262,8 +263,8 @@ call plug#end()
 
     "Maps
     nnoremap <F11> :tabnew Go<cr>:VTerm<cr>go run ./main.go<cr>
-    nnoremap <leader>gj :CocCommand go.tags.add<cr>
-    nnoremap <leader>cj :CocCommand go.tags.clear<cr>
+    nnoremap <leader>jt :CocCommand go.tags.add<cr>
+    nnoremap <leader>ct :CocCommand go.tags.clear<cr>
     nnoremap <leader>gt :CocCommand go.test.generate.file<cr>
 
     "Syntax Highlighting
