@@ -265,7 +265,7 @@ default_floating_border pixel 4
 
 
 #-------------------------------------------------------------------------------------------
-bindsym $mod+t exec polo
+bindsym $mod+t exec thunar
 bindsym $mod+c exec chromium
 bindsym $mod+m exec virt-manager
 

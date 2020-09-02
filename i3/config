@@ -221,7 +221,7 @@ bar {
 #-------------------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------------------
-bindsym $mod+t exec polo
+bindsym $mod+t exec thunar
 bindsym $mod+c exec chromium
 bindsym $mod+m exec virt-manager
 bindsym $mod+p exec flameshot gui

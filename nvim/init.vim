@@ -190,6 +190,9 @@ call plug#end()
     "Search ocurrencys
     nnoremap <c-f> :Ag<cr>
 
+    "File Buffer
+    nnoremap <tab> :b#<cr>
+    
     "Tabs
     nnoremap <c-right> :tabnext<cr>
     nnoremap <c-left> :tabprevious<cr>
