@@ -226,8 +226,19 @@ xkb_layout "br"
 xkb_numlock enabled
 xkb_options caps:swapescape
 
-
 }
+
+#Touchpad
+
+input ELAN0501 {
+    left_handed enabled
+    tap enabled
+    natural_scroll disabled
+    dwt enabled
+    pointer_accel 1 # set mouse sensitivity (between -1 and 1)
+}
+
+
 #-------------------------------------------------------------------------------------------
 
 
