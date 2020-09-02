@@ -210,8 +210,8 @@ call plug#end()
     nnoremap <leader>nf :tabnew %:h/filename
 
     "Terminal
-    nnoremap <leader>ts :VTerm<cr>
-    nnoremap <leader>tv :Term<cr>
+    nnoremap <leader>tv :VTerm<cr>
+    nnoremap <leader>ts :Term<cr>
 
     "Comment Code
     nmap <C-_>   <Plug>NERDCommenterToggle
