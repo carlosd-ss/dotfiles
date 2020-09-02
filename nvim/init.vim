@@ -203,7 +203,7 @@ call plug#end()
     "Substitute all
     nnoremap <leader>su :%s/new/old/g
     "NewFile
-    nnoremap <leader>nf :e %:h/filename
+    nnoremap <leader>nf :tabnew %:h/filename
 
     "Terminal
     nnoremap <leader>ts :VTerm<cr>
