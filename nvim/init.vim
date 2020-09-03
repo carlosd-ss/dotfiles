@@ -1,3 +1,10 @@
+                "_   _ _____ _____     _____ __  __ 
+                "| \ | | ____/ _ \ \   / /_ _|  \/  |
+                "|  \| |  _|| | | \ \ / / | || |\/| |
+                "| |\  | |__| |_| |\ V /  | || |  | |
+                "|_| \_|_____\___/  \_/  |___|_|  |_|
+
+
 "--------------------------------Plugins---------------------------------------------
 
 call plug#begin()
@@ -268,13 +275,13 @@ call plug#end()
     " Run gofmt on save
     autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
     let g:go_fmt_command = "goimports"
-    
 
     "Maps
     nnoremap <F11> :tabnew Go<cr>:VTerm<cr>go run ./main.go<cr>
     nnoremap <leader>jt :CocCommand go.tags.add<cr>
     nnoremap <leader>ct :CocCommand go.tags.clear<cr>
     nnoremap <leader>gt :CocCommand go.test.generate.file<cr>
+    nnoremap <leader>gr :GoReferrers<cr>
 
     "Syntax Highlighting
     let g:go_fold_enable = ['block', 'import', 'varconst', 'package_comment']
