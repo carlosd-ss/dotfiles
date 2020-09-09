@@ -14,7 +14,34 @@
 
 ## See the project
 
+| Dependences      |
+|------------------|
+| Sway             |
+| Wofi             |
+| Wayland          |
+| Waybar           |
+| SwayLock         |
+| kitty            |
+| otf-font-awesome |
+| grim             |
+| chromium         |
+| thunar           |
+| I3               |
+| I3blocks        |
+
+
+
+```zsh
+#Install All
+
+#Arch
+
+sudo pacman -S sway wofi wayland waybar swaylock kitty grim chromium thunar otf-font-awesome i3-gaps i3blocks
+```
+
+
 ### SWAY
+
 ![SWAY](https://img.shields.io/badge/WM-SWAY-%2368751C?style=for-the-badge&labelColor=%23444444)
 ![WAYBAR](https://img.shields.io/badge/BAR-WAYBAR-%2368751C?style=for-the-badge&labelColor=%23444444)
 
