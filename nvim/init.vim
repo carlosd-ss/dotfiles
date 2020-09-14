@@ -68,6 +68,9 @@ call plug#begin()
     
     "Comment
     Plug 'preservim/nerdcommenter'
+    
+    "Markdown
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 "------------------------------------------------------------------------------------
 " LANGUAGES PLUGS
@@ -232,6 +235,10 @@ call plug#end()
     nnoremap <S-Down> :m+<CR>
     inoremap <S-Up> <Esc>:m-2<CR>
     inoremap <S-Down> <Esc>:m+<CR>
+    
+    "Markdown
+    nmap <leader>mp :MarkdownPreview<cr>
+    nmap <leader>ms :MarkdownPreviewStop<cr>
 
 "------------------------------------------------------------------------------------
 " SNIPS
