@@ -236,7 +236,7 @@ call plug#end()
     inoremap <S-Up> <Esc>:m-2<CR>
     inoremap <S-Down> <Esc>:m+<CR>
     
-    "Markdown
+    "Markdown Preview
     nmap <leader>mp :MarkdownPreview<cr>
     nmap <leader>ms :MarkdownPreviewStop<cr>
 
