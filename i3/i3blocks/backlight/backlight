@@ -36,6 +36,6 @@ case $BLOCK_BUTTON in
   5) $XBACKLIGHT_SET -dec "$STEP_SIZE" ;; # scroll down, decrease
 esac
 
-
+exec xbacklight | cut -f1 -d'.'
 BRIGHTNESS=$(xbacklight -get)
 echo "${BRIGHTNESS}%"

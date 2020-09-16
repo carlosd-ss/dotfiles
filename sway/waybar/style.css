@@ -10,14 +10,13 @@
     border: none;
     border-radius: 1;
     min-height: 0;
-    margin: 0 10 0 0;
+    margin: 0 0 0 0;
     padding: 0;
 }
 
 /* The  bar */
 #waybar {
-    background: transparent;
-    color: white;
+    background: #282828;
     font-family: "awesome 5";
     font-size: 15px;
     font-weight: bold;
@@ -42,90 +41,75 @@
 
 /*modules style*/
 #disk {
-    background: #d79921;
-    color: #282828;
+    color: #d79921;
 
 }
 
 #backlight {
-    background: #689d6a;
-    color: #282828;
+    color: #689d6a;
 }
 
 #battery {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    background: #fbf1c7;
-    color: #282828;
+    color: #d65d0e;
 }
 
 #battery.warning {
-    color: orange;
+
+    color: #d65d0e;
 }
 
 #clock.date {
-    background: #d65d0e;
-    color: #282828;
+    color: #fbf1c7;
     font-weight: bold;
 }
 
 #clock.time {
-    background: #eceff4;
-    color: #282828;
+    color: #fbf1c7;
     font-weight: bold;
 }
 
 #cpu {
-    background: #af3a03;
-    color: #282828;
+    color: #cc241d;
 }
 
 #cpu.warning {
-    color: orange;
+    color: #cc241d;
 }
 
 #cpu.critical {
-    color: orange;
+    color: #cc241d;
 }
 
 #memory {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    background: #458588;
-    color: #282828;
+    color: #458588;
 }
 
 #memory.warning {
-    color: orange;
+    color: #458588;
 }
 
-#mode {
-    background: #64727d;
-    border-top: 2px solid white;
-    /* To compensate for the top border and still have vertical centering */
-    padding-bottom: 2px;
-}
 
 #network {
-    background: #98971a;
-    color: #282828;
+    color: #98971a;
 }
 
 #network.disconnected {
-    color: orange;
+    color: #98971a;
 }
 
 #pulseaudio {
-    background: #8f3f71;
-    color: #282828;
+    color: #8f3f71;
     
 }
 
 #pulseaudio.muted {
-    background: #98971a;
-    color: #282828;
+    color: #8f3f71;
 }
 
 #tray {
@@ -140,14 +124,13 @@
     font-weight: bold;
     padding-bottom: 2px;
     padding-left: 10px;
-    padding-right: 5px;
+    padding-right: 10px;
     color: #076678;
-    background: #282828;
     border-radius: 10px;
 }
 
 #workspaces button.focused {
     font-weight: bold;
     color: #282828;
-    background-color: #076678;
+    color: #076678;
 }

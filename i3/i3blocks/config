@@ -27,7 +27,7 @@ separator_block_width=10
 
 
 [time]
-background=#d65d0e
+color=#d65d0e
 command=time/time
 STRFTIME_FORMAT=  %Y-%m-%d   %H:%M
 interval=1
@@ -36,7 +36,7 @@ TZ_LABELS=,Brazil,AU,Hyderabad
 
 #-----------------------------------------------
 [wifi]
-background=#98971a
+color=#98971a
 command=wifi/wifi
 label=  
 INTERFACE=wlp3s0
@@ -47,7 +47,7 @@ interval=1
 
 
 [memory]
-background=#458588
+color=#458588
 command=memory/memory
 label=   
 interval=1
@@ -57,7 +57,7 @@ interval=1
 #-----------------------------------------------
 
 [cpu_usage]
-background=#af3a03
+color=#af3a03
 command=cpu_usage/cpu_usage
 interval=1
 LABEL=  
@@ -69,7 +69,7 @@ LABEL= 
 
 #-----------------------------------------------
 [battery]
-background=#076678
+color=#076678
 command=battery/battery
 interval=1
 LABEL=  
@@ -78,7 +78,7 @@ LABEL= 
 
 
 [disk]
-background=#d79921
+color=#d79921
 command=disk/disk
 LABEL=  
 #DIR=$HOME
@@ -86,11 +86,11 @@ LABEL= 
 interval=1
 #-----------------------------------------------
 [backlight]
-background=#689d6a
+color=#689d6a
 command=backlight/backlight
 label=  
 interval=1
-STEP_SIZE=1
+STEP_SIZE=2
 USE_SUDO=0
 
 
@@ -98,7 +98,7 @@ USE_SUDO=0
 
 
 [volume]
-background=#8f3f71
+color=#8f3f71
 command=volume/volume
 LABEL=  
 interval=1
