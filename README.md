@@ -50,9 +50,26 @@ sudo pacman -S sway wofi wayland waybar swaylock kitty grim chromium thunar otf-
 
 ### I3
 ![I3](https://img.shields.io/badge/WM-I3-%2320444D?style=for-the-badge&labelColor=%23444444)
-![I#BLOCKS](https://img.shields.io/badge/BAR-I3BLOCKS-%2320444D?style=for-the-badge&labelColor=%23444444)
+![I3BLOCKS](https://img.shields.io/badge/BAR-I3BLOCKS-%2320444D?style=for-the-badge&labelColor=%23444444)
 
 <img src="https://github.com/carlosdss22/dotfiles/blob/master/.github/i3.png" height="500" widht="100">
+
+
+## BAR
+
+
+### WAYBAR
+
+![WAYBAR](https://img.shields.io/badge/BAR-WAYBAR-%2368751C?style=for-the-badge&labelColor=%23444444)
+
+<img src="https://github.com/carlosd-ss/dotfiles/blob/master/.github/waybar.png"  widht="100">
+
+### i3BLOCKS
+
+![I3BLOCKS](https://img.shields.io/badge/BAR-I3BLOCKS-%2320444D?style=for-the-badge&labelColor=%23444444)
+
+<img src="https://github.com/carlosd-ss/dotfiles/blob/master/.github/i3bar.png"  widht="100">
+
 
 
 
