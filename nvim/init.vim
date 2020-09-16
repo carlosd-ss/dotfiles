@@ -183,6 +183,10 @@ call plug#end()
      "Terminal
     set splitright
     set splitbelow
+    
+    "Set vimgrep
+    set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+    set grepformat=%f:%l:%c:%m
 
 "------------------------------------------------------------------------------------
 " MAPS
@@ -215,6 +219,8 @@ call plug#end()
 
     "Substitute all
     nnoremap <leader>su :%s/new/old/g
+    nnoremap <leader>sp :vimgrep /old/gj **/* 
+    nnoremap <leader>sb :cfdo %s/old/new/ge | update
  
     "NewFile
     nnoremap <leader>nf :tabnew %:h/filename
