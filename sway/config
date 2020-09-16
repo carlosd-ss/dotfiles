@@ -59,7 +59,7 @@
          bindsym $mod+t exec thunar
          bindsym $mod+c exec chromium
          bindsym $mod+m exec virt-manager
-         bindsym Print exec grim
+         bindsym Print exec grim -g "$(slurp)" - | wl-copy
          exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
          output "*" bg  /home/cdss/Imagens/wp/Picture.png fill
 
