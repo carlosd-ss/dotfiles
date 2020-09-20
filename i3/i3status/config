@@ -1,0 +1,109 @@
+general {
+        colors = true
+        interval = 1
+        output_format = "i3bar"
+        markup = pango
+}
+
+#------------------------------------------------------------------------------------------------------------------------
+
+order += "tztime local"
+order += "wireless wlp3s0"
+order += "ethernet enp2s0f1"
+order += "memory"
+order += "cpu_usage"
+order += "battery 0"
+order += "disk /"
+order += "volume master"
+
+#------------------------------------------------------------------------------------------------------------------------
+
+volume master {
+        format = "<span foreground='#b16286'> %volume</span>"
+        format_muted = "<span foreground='#b16286'> </span>"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+        separator = false
+        separator_block_width = 20
+}
+
+#------------------------------------------------------------------------------------------------------------------------
+
+disk "/" {
+        format = "<span foreground='#dd9921'> %free</span>"
+        separator = false
+        separator_block_width = 20
+}
+
+#------------------------------------------------------------------------------------------------------------------------
+
+battery 0 {
+        format = "<span foreground='#d65d0e'>%status%percentage</span>"
+        format_down = "<span foreground='#d65d0e'></span>"
+        status_chr = "⚡"
+        status_bat = " "
+        status_unk = "?"
+        status_full = " "
+        path = "/sys/class/power_supply/BAT1/uevent"
+        last_full_capacity = true
+        integer_battery_capacity = true
+        low_threshold = 20
+        separator = false
+        separator_block_width = 20
+}
+
+#------------------------------------------------------------------------------------------------------------------------
+
+cpu_usage {
+        format = "<span  foreground='#cc211d'> %usage</span>"
+        separator = false
+        separator_block_width = 20
+}
+
+#------------------------------------------------------------------------------------------------------------------------
+
+memory {
+        format = "<span  foreground='#458588'> %percentage_used</span>"
+        threshold_degraded = "1.4G"
+        format_degraded = "MEM %used"
+        separator = false
+        separator_block_width = 20
+}
+
+#------------------------------------------------------------------------------------------------------------------------
+
+wireless wlp3s0 {
+
+        format_up = "<span  foreground='#98971a'> %essid </span>"
+        format_down = "<span foreground='#98971a'>睊</span>"
+        separator = false
+        separator_block_width = 20
+}
+
+#------------------------------------------------------------------------------------------------------------------------
+
+ethernet enp2s0f1 {
+        format_up = "<span  foreground='#98971a'> </span>"
+        format_down = "<span  foreground='#98971a'> </span>"
+        separator = false
+        separator_block_width = 20
+}
+
+#------------------------------------------------------------------------------------------------------------------------
+
+tztime local {
+        format = "<span  foreground='#fbf1c7'>%time</span>"
+        format_time = " %a %-d %b   %H:%M"
+        separator = false
+        align = "center"
+        separator_block_width = 200
+}
+
+#------------------------------------------------------------------------------------------------------------------------
+
+load {
+        format = "LOA:%1min"
+}
+
+#------------------------------------------------------------------------------------------------------------------------
