@@ -87,7 +87,7 @@ ethernet enp2s0f1 {
 
 tztime local {
         format = "<span  foreground='#fbf1c7'>%time</span>"
-        format_time = " %a %-d %b   %H:%M"
+        format_time = " » %a %-d %b,  %H:%M"
         separator = false
         align = "center"
         separator_block_width = 250
