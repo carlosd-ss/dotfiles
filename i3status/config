@@ -13,7 +13,6 @@ order += "ethernet enp2s0f1"
 order += "memory"
 order += "cpu_usage"
 order += "battery 0"
-order += "disk /"
 order += "volume master"
 
 #------------------------------------------------------------------------------------------------------------------------
@@ -30,13 +29,7 @@ volume master {
 
 #------------------------------------------------------------------------------------------------------------------------
 
-disk "/" {
-        format = "<span foreground='#dd9921'> %free</span>"
-        separator = false
-        separator_block_width = 20
-}
 
-#------------------------------------------------------------------------------------------------------------------------
 
 battery 0 {
         format = "<span foreground='#d65d0e'>%status%percentage</span>"
@@ -97,7 +90,7 @@ tztime local {
         format_time = " %a %-d %b   %H:%M"
         separator = false
         align = "center"
-        separator_block_width = 200
+        separator_block_width = 250
 }
 
 #------------------------------------------------------------------------------------------------------------------------

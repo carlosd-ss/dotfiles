@@ -154,11 +154,22 @@
 #-------------------------------------------------------------------------------------------------
 
         bar {
-            swaybar_command waybar
+             status_command i3status
+	     
+		 position top
+                    height  33
+                    font pango:awesome 5  15 bold
+
+                    colors {
+                        separator          #282828
+                            background         #282828
+                            statusline         #282828
+                            focused_workspace   #458588 #282828 #458588
+                            inactive_workspace  #076678 #282828 #076678
+                    }
         }
 
-        include /etc/sway/config.d/*
-
+        
 
 #-------------------------------------------------------------------------------------------------
 # KEYBOARD AND MOUSE
@@ -192,9 +203,14 @@
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
-    bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+    bindsym XF86MonBrightnessUp exec brightnessctl set +10%   
     bindsym XF86AudioPlay exec playerctl play-pause
-    bindsym XF86AudioNext exec playerctl next
+    bindsym XF86AudioNext exec playerctl nextf
     bindsym XF86AudioPrev exec playerctl previous
+
+
+
+
+
 
 #-------------------------------------------------------------------------------------------
