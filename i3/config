@@ -22,7 +22,7 @@
   
     bindsym $mod+Return exec kitty
     bindsym $mod+Shift+q kill
-    bindsym $mod+d exec rofi -show drun
+    bindsym $mod+d exec rofi -show drun -show-icons
     bindsym $mod+t exec thunar
     bindsym $mod+c exec chromium
     bindsym $mod+m exec virt-manager
