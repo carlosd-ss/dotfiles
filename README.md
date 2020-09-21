@@ -17,9 +17,8 @@
 | Dependences      |
 |------------------|
 | Sway             |
-| Wofi             |
+| I3Status         |
 | Wayland          |
-| Waybar           |
 | SwayLock         |
 | kitty            |
 | otf-font-awesome |
@@ -27,7 +26,7 @@
 | chromium         |
 | thunar           |
 | I3               |
-| I3blocks        |
+| Rofi             |
 
 
 
@@ -37,6 +36,9 @@
 #Arch
 
 sudo pacman -S sway  wayland  swaylock kitty grim chromium thunar otf-font-awesome i3-gaps i3status
+
+yay -S rofi-lbonn-wayland-git
+
 ```
 
 
@@ -52,7 +54,7 @@ sudo pacman -S sway  wayland  swaylock kitty grim chromium thunar otf-font-aweso
 
 ### I3STATUS
 
-![I3BLOCKS](https://img.shields.io/badge/BAR-I3BLOCKS-%2320444D?style=for-the-badge&labelColor=%23444444)
+![I3BLOCKS](https://img.shields.io/badge/BAR-I3STATUS-%2320444D?style=for-the-badge&labelColor=%23444444)
 
 <img src="https://github.com/carlosd-ss/dotfiles/blob/master/.github/bar.png"  widht="100">
 
