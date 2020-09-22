@@ -73,5 +73,5 @@ yay -S rofi-lbonn-wayland-git
 
 ```zsh
 
- :CocInstall coc-tabnine coc-yaml coc-snippets coc-highlight coc-html  coc-tsserver coc-css coc-vetur coc-json coc-pairs  coc-go coc-phpls coc-sql coc-fzf-preview coc-eslint coc-tslint-plugin coc-rls coc-python coc-flutter
+ :CocInstall coc-tabnine coc-yaml coc-snippets coc-highlight coc-html  coc-tsserver coc-css coc-vetur coc-json coc-pairs  coc-go coc-sql coc-fzf-preview coc-eslint coc-tslint-plugin
 ```
