@@ -211,6 +211,18 @@
 
 
 
+#-------------------------------------------------------------------------------------------------
+# GTK
+#-------------------------------------------------------------------------------------------------
 
 
-#-------------------------------------------------------------------------------------------
+
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'oomox-158'
+    gsettings set $gnome-schema icon-theme 'Zafiro-icons'
+    gsettings set $gnome-schema cursor-theme 'Sweet-cursors'
+}
+
+

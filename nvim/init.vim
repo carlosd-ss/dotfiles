@@ -221,7 +221,7 @@ call plug#end()
     nnoremap <leader>su :%s/new/old/g
     nnoremap <leader>sp :vimgrep /old/gj **/* 
     nnoremap <leader>sb :cfdo %s/old/new/ge | update
- 
+    
     "NewFile
     nnoremap <leader>nf :tabnew %:h/filename
 
@@ -290,11 +290,10 @@ call plug#end()
     let g:go_fmt_command = "goimports"
 
     "Maps
-    nnoremap <F11> :tabnew Go<cr>:VTerm<cr>go run ./main.go<cr>
     nnoremap <leader>jt :CocCommand go.tags.add<cr>
     nnoremap <leader>ct :CocCommand go.tags.clear<cr>
     nnoremap <leader>gt :CocCommand go.test.generate.file<cr>
-    nnoremap <leader>gf :GoReferrers<cr>
+    nnoremap <leader>gr :GoReferrers<cr>
 
     "Syntax Highlighting
     let g:go_fold_enable = ['block', 'import', 'varconst', 'package_comment']
