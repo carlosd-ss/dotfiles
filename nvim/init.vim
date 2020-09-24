@@ -51,7 +51,7 @@ call plug#begin()
 " FEATURES - 
 "------------------------------------------------------------------------------------
     
-"Terminal
+    "Terminal
     Plug 'vimlab/split-term.vim'
     
     "Syntax check
@@ -79,16 +79,6 @@ call plug#begin()
     "Golang
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     
-    "JS
-
-    Plug 'leafOfTree/vim-vue-plugin'
-    Plug 'cakebaker/scss-syntax.vim'
-    Plug 'iloginow/vim-stylus'
-    Plug 'yuezk/vim-js'
-    Plug 'maxmellon/vim-jsx-pretty'
-    Plug 'leafgarland/typescript-vim'
-
-
 "------------------------------------------------------------------------------------
 " 
 "------------------------------------------------------------------------------------
