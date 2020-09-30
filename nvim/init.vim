@@ -79,6 +79,7 @@ call plug#begin()
     "Golang
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     
+
 "------------------------------------------------------------------------------------
 " 
 "------------------------------------------------------------------------------------
@@ -209,8 +210,8 @@ call plug#end()
 
     "Substitute all
     nnoremap <leader>su :%s/new/old/g
-    nnoremap <leader>sp :vimgrep /old/gj **/* 
-    nnoremap <leader>sb :cfdo %s/old/new/ge | update
+    nnoremap <leader>sp :grep original_string
+    nnoremap <leader>sb :cfdo %s/original_string/new_string/g
     
     "NewFile
     nnoremap <leader>nf :tabnew %:h/filename
