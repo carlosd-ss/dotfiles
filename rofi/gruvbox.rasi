@@ -1,44 +1,81 @@
+configuration {
+    display-drun:                   "Apps";
+    display-window:                 "Window";
+    show-icons:true;
+}
+ 
 * {
-  background-color: #282828;
-  border-color: #282828;
-  text-color: #ffffff;
-  spacing: 0;
-  width: 400px;
-  height:400px;
+    lines: 15;
+    columns: 1;
+    background-color: #282828;
+    border-color: #00000000;
+    text-color: #fbf1c7;
+    font: "Iosevka 16";
 }
-
-inputbar {
-  border: 0 0 1px 0;
-  children: [prompt,entry];
+ 
+#window {
+    border: 0;
+    border-radius: 4px;
+    padding: 50;
+    width: 28%;
+    height: 50%;
 }
-
-prompt {
-  padding: 16px;
-  border: 0 1px 0 0;
+ 
+#mainbox {
+    background-color: #00000000;
+    children: [inputbar, listview];
+    spacing: 10px;
+    /*margin: 20%;*/
+    padding: 30px 0;
+    border: 1px;
+    border-color: @base0D;
 }
-
-textbox {
-  background-color: #d65d0e;
-  border: 0 0 1px 0;
-  border-color: #d65d0e;
-  padding: 8px 16px;
+ 
+ 
+#listview {
+    background-color: #00000000;
+    fixed-height: 0;
+    border: 0px;
+    spacing: 5px;
+    scrollbar: false;
+    padding: 10px 10px 0px;
 }
-
-entry {
-  padding: 16px;
+ 
+#element {
+    background-color: #00000000;
+    border: 0;
+    border-radius: 15px;
+    padding: 5 0  5 10 ;
 }
-
-listview {
-  cycle: false;
-  margin: 0 0 -1px 0;
-  scrollbar: false;
+ 
+#element selected {
+    background-color: #98971a;
+    text-color: #fbf1c7;
 }
-
-element {
-  border: 0 0 1px 0;
-  padding: 16px;
+ 
+ 
+#inputbar {
+    children:   [ entry,case-indicator ];
+    background-color: #00000000;
+    padding: 0 0 0 14;
 }
-
-element selected {
-  background-color: #98971a;
+ 
+#case-indicator {
+    background-color: #00000000;
+    spacing:    0;
+}
+#entry {
+    background-color: #00000000;
+    spacing:    0;
+}
+#prompt {
+    background-color: #00000000;
+    spacing:    0;
+}
+ 
+#textbox-prompt-colon {
+    background-color: #00000000;
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
 }
