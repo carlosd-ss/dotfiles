@@ -14,19 +14,20 @@
 
 ## See the project
 
-| Dependences      |
-|------------------|
-| Sway             |
-| I3Status         |
-| Wayland          |
-| SwayLock         |
-| kitty            |
-| otf-font-awesome |
-| grim             |
-| chromium         |
-| thunar           |
-| I3               |
-| Rofi             |
+| Dependences        |
+|--------------------|
+| bspwm              |
+| polybar            |
+| rofi               |
+| feh                |
+| neovim             |
+| kitty              |
+| thunar             |
+| flameshot          |
+| chromium           |
+| Jetbrains Mono.ttf |
+| Iosevka.ttf        |
+| IcoMoon.ttf        |
 
 
 
@@ -35,26 +36,25 @@
 
 #Arch
 
-sudo pacman -S sway  wayland  swaylock kitty grim chromium thunar otf-font-awesome i3-gaps i3status
+sudo pacman -S bspwm rofi feh neovim kitty thunar flameshot chromium 
 
-yay -S rofi-lbonn-wayland-git
+yay -S polybar 
 
 ```
 
 
-### SWAY/I3 
+### BSPWM
 
-![SWAY](https://img.shields.io/badge/WM-SWAY-%2368751C?style=for-the-badge&labelColor=%23444444)
-![I3](https://img.shields.io/badge/WM-I3-%2320444D?style=for-the-badge&labelColor=%23444444)
-<img src="https://github.com/carlosdss22/dotfiles/blob/master/.github/gruv.png" height="500" widht="100">
+![BSPWM](https://img.shields.io/badge/WM-BSPWM-%2320444D?style=for-the-badge&labelColor=%23444444)
+<img src="https://github.com/carlosdss22/dotfiles/blob/master/.github/gruvbox.png" height="500" widht="100">
 
 
 ## BAR
 
 
-### I3STATUS
+### POLYBAR
 
-![I3BLOCKS](https://img.shields.io/badge/BAR-I3STATUS-%2320444D?style=for-the-badge&labelColor=%23444444)
+![POLYBAR](https://img.shields.io/badge/BAR-POLYBAR-%2320444D?style=for-the-badge&labelColor=%23444444)
 
 <img src="https://github.com/carlosd-ss/dotfiles/blob/master/.github/bar.png"  widht="100">
 
