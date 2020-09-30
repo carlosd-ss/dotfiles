@@ -45,6 +45,7 @@ yay -S polybar
 
 ### BSPWM
 
+
 ![BSPWM](https://img.shields.io/badge/WM-BSPWM-%2320444D?style=for-the-badge&labelColor=%23444444)
 <img src="https://github.com/carlosdss22/dotfiles/blob/master/.github/gruvbox.png" height="500" widht="100">
 
