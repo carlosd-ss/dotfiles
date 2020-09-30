@@ -106,9 +106,9 @@ Print
 
 #Brightness control
 XF86MonBrightnessDown
-	xbacklight -dec 5
+	brightnessctl -s s 10%-
 XF86MonBrightnessUp
-	xbacklight -inc 5
+	brightnessctl -s s 10%+
 
 #Volume Control
 XF86AudioLowerVolume

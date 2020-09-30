@@ -53,31 +53,20 @@ source "$HOME/.antigen/antigen.zsh"
 
 antigen bundle chrissicool/zsh-256color
 antigen bundle ael-code/zsh-colored-man-pages
-antigen bundle zpm-zsh/colors
 antigen bundle zdharma/fast-syntax-highlighting
-
 
 #-----------------------------------------------------------------------------------------------------------------
 # PLUGS UTILS
 #-----------------------------------------------------------------------------------------------------------------
 
-# Set the default plugin repo to be zsh-utils
 antigen use belak/zsh-utils
-
-# Specify completions we want before the completion module
-antigen bundle zsh-users/zsh-completions
-
-# Specify plugins we want
 antigen bundle editor
 antigen bundle history
 antigen bundle prompt
 antigen bundle utility
 antigen bundle completion
-
-# Load everything
 antigen apply
 
-# Set any settings or overrides here
 prompt belak
 bindkey -e
 
@@ -88,16 +77,15 @@ setopt auto_cd
 # PLUGS SEARCH
 #-----------------------------------------------------------------------------------------------------------------
 
-antigen bundle matthieusb/zsh-sdkman
+antigen bundle zsh-users/zsh-completions
 antigen bundle marlonrichert/zsh-autocomplete
 antigen bundle zsh-users/zsh-autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
+antigen bundle zsh-users/zsh-history-substring-search
 
 #-----------------------------------------------------------------------------------------------------------------
 # ALIAS
 #-----------------------------------------------------------------------------------------------------------------
-
-#start neovim
-
 
 alias vim="nvim"
 alias ls="lsd"
