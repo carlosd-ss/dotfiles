@@ -19,6 +19,7 @@
 | bspwm              |
 | polybar            |
 | rofi               |
+| polo               |
 | feh                |
 | neovim             |
 | kitty              |
@@ -38,7 +39,7 @@
 
 sudo pacman -S bspwm rofi feh neovim kitty thunar flameshot chromium 
 
-yay -S polybar 
+yay -S polybar polo-bin 
 
 ```
 
