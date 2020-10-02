@@ -223,6 +223,7 @@ call plug#end()
     "Comment Code
     nmap <C-_>   <Plug>NERDCommenterToggle
     xmap <C-_>   <Plug>NERDCommenterToggle<CR>
+    imap <C-_>   <esc><Plug>NERDCommenterToggle<CR>i
     
     "Coc Autocomplete
     inoremap <silent><expr> <c-space> coc#refresh()

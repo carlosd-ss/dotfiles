@@ -80,8 +80,13 @@ setopt auto_cd
 antigen bundle zsh-users/zsh-completions
 antigen bundle marlonrichert/zsh-autocomplete
 antigen bundle zsh-users/zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
 antigen bundle zsh-users/zsh-history-substring-search
+source /home/cdss/.antigen/bundles/zsh-users/zsh-history-substring-search/zsh-history-substring-search.zsh
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=fg=default,bg=default
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 #-----------------------------------------------------------------------------------------------------------------
 # ALIAS
