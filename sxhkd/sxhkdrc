@@ -5,7 +5,10 @@
 
 
 super + Return
-	kitty
+	kitty 
+	
+super + BackSpace
+	kitty sh -c "tmux att || tmux new -t CD"
 
 
 

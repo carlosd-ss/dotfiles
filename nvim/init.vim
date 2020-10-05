@@ -51,9 +51,6 @@ call plug#begin()
 " FEATURES - 
 "------------------------------------------------------------------------------------
     
-    "Terminal
-    Plug 'vimlab/split-term.vim'
-    
     "Syntax check
     Plug 'dense-analysis/ale'
     
@@ -112,7 +109,7 @@ call plug#end()
     let g:indentLine_color_term = 239
     let g:indentLine_color_tty_light = 7 " (default: 4)
     let g:indentLine_color_dark = 1 " (default: 2)
-    let g:indentLine_char_list = ['|', '¦', '┆', '｜']
+    let g:indentLine_char_list = ['｜']
     let g:indentLine_color_gui = '#434C5E'
 
 "------------------------------------------------------------------------------------
@@ -317,9 +314,6 @@ call plug#end()
     nnoremap <C-l> :NERDTreeToggle<CR>
     let NERDTreeShowHidden=1
 
-    "Ale
-    nnoremap <F9> :ALEFix<cr>
-    
     " ESLint fix
     let g:ale_fixers = {}
     let g:ale_fixers.javascript = ['eslint']

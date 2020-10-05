@@ -77,10 +77,14 @@ setopt auto_cd
 # PLUGS SEARCH
 #-----------------------------------------------------------------------------------------------------------------
 
-antigen bundle zsh-users/zsh-completions
 antigen bundle marlonrichert/zsh-autocomplete
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-history-substring-search
+
+#-----------------------------------------------------------------------------------------------------------------
+# HISTORY SUBSTRING
+#-----------------------------------------------------------------------------------------------------------------
+
 source /home/cdss/.antigen/bundles/zsh-users/zsh-history-substring-search/zsh-history-substring-search.zsh
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=fg=default,bg=default
 bindkey "$terminfo[kcuu1]" history-substring-search-up
@@ -88,6 +92,13 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+#-----------------------------------------------------------------------------------------------------------------
+# ZSH AUTOSUGGEST
+#-----------------------------------------------------------------------------------------------------------------
+
+source /home/cdss/.antigen/bundles/zsh-users/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#665c54,bg=default,bold,underline"
 #-----------------------------------------------------------------------------------------------------------------
 # ALIAS
 #-----------------------------------------------------------------------------------------------------------------
