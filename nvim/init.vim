@@ -213,10 +213,6 @@ call plug#end()
     "NewFile
     nnoremap <leader>nf :tabnew %:h/filename
 
-    "Terminal
-    nnoremap <leader>tv :VTerm<cr>
-    nnoremap <leader>ts :Term<cr>
-
     "Comment Code
     nmap <C-_>   <Plug>NERDCommenterToggle
     xmap <C-_>   <Plug>NERDCommenterToggle<CR>
