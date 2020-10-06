@@ -19,7 +19,7 @@
 | bspwm              |
 | polybar            |
 | rofi               |
-| polo               |
+| nemo               |
 | feh                |
 | neovim             |
 | kitty              |
@@ -37,9 +37,9 @@
 
 #Arch
 
-sudo pacman -S bspwm rofi feh neovim kitty thunar flameshot chromium 
+sudo pacman -S bspwm rofi feh neovim kitty thunar flameshot chromium nemo
 
-yay -S polybar polo-bin 
+yay -S polybar
 
 ```
 
