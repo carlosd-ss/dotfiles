@@ -75,12 +75,21 @@ super + Tab
 
 
 
-super + alt + {Left,Down,Up,Right}
+super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-super + alt + shift + {Left,Down,Up,Right}
+super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------
+# ORIENTATION
+#----------------------------------------------------------------------------------------------------------------------------------------------
+
+super + alt + {Right,Left,Up,Down}
+  bspc node -f --to-node {prev.local,next.local,next,prev}
 
 
 
