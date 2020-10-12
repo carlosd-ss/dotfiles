@@ -84,8 +84,7 @@ call plug#begin()
       \ 'coc-sh',
       \ 'coc-pairs',
       \ 'coc-highlight',
-      \ 'coc-fzf-preview',
-      \ 'coc-prettier',
+      \ 'coc-fzf-preview'
       \ ]
 
 "------------------------------------------------------------------------------------
