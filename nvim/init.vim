@@ -14,9 +14,6 @@ call plug#begin()
 "------------------------------------------------------------------------------------
     "Gruvbox
     Plug 'morhetz/gruvbox'
-
-    "Syntax  Highlighting
-    Plug 'sheerun/vim-polyglot'
     
     "Airline
     Plug 'vim-airline/vim-airline'
@@ -50,18 +47,12 @@ call plug#begin()
 "------------------------------------------------------------------------------------
 " FEATURES - 
 "------------------------------------------------------------------------------------
-    
-    "Syntax check
-    Plug 'dense-analysis/ale'
-    
+ 
     "Closetag HTML
     Plug 'alvan/vim-closetag'
     
     "Color Pairs
     Plug 'luochen1990/rainbow'
-    
-    "Ident 
-    Plug 'Yggdroot/indentLine'   
     
     "Comment
     Plug 'preservim/nerdcommenter'
@@ -77,6 +68,25 @@ call plug#begin()
     "Golang
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     
+    let g:coc_global_extensions = [
+      \ 'coc-go',
+      \ 'coc-sql',
+      \ 'coc-docker',
+      \ 'coc-json',
+      \ 'coc-tabnine',
+      \ 'coc-tsserver',
+      \ 'coc-vetur',
+      \ 'coc-css',
+      \ 'coc-highlight',
+      \ 'coc-styled-components',
+      \ 'coc-eslint',
+      \ 'coc-yaml',
+      \ 'coc-sh',
+      \ 'coc-pairs',
+      \ 'coc-highlight',
+      \ 'coc-fzf-preview',
+      \ 'coc-prettier',
+      \ ]
 
 "------------------------------------------------------------------------------------
 " 
@@ -87,7 +97,6 @@ call plug#end()
 "------------------------------------------------------------------------------------
 " COLORS
 "------------------------------------------------------------------------------------
-
     
     "Theme and BG
     colorscheme gruvbox
@@ -105,13 +114,6 @@ call plug#end()
     let g:rainbow_conf = {
     \   'guifgs': ['#d65d0e','#cc241d','#458588', '#d79921','#98971a','#b16286', '#689d6a'],
     \}
-
-    "Ident
-    let g:indentLine_color_term = 239
-    let g:indentLine_color_tty_light = 7 " (default: 4)
-    let g:indentLine_color_dark = 1 " (default: 2)
-    let g:indentLine_char_list = ['｜']
-    let g:indentLine_color_gui = '#434C5E'
 
 "------------------------------------------------------------------------------------
 " PREFERENCES
@@ -168,10 +170,6 @@ call plug#end()
  
     "Fast Scrolling  
      set ttyfast
-    
-     "Terminal
-    set splitright
-    set splitbelow
     
     "Set vimgrep
     set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
@@ -246,10 +244,8 @@ call plug#end()
 " LANGS CONFIG
 "------------------------------------------------------------------------------------
 
-"-----------------------HTML---------------------------------------------------
-
-    autocmd FileType html let b:coc_pairs_disabled = ['<']
-    
+"----------------------HTML,CSS,JS,TS,ELM,REACT,VUE---------------------------
+ 
     let g:closetag_filenames = '*.html,*.xhtml,*.phtl, *.vue'
 
     let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
@@ -260,21 +256,9 @@ call plug#end()
 
     let g:closetag_emptyTags_caseSensitive = 1
 
-
-"-----------------------VUE----------------------------------------------
-    
-    autocmd FileType vue let b:coc_pairs_disabled = ['<']
-    let g:vim_vue_plugin_load_full_syntax = 1
-    let g:vim_vue_plugin_highlight_vue_keyword= 1
-    let g:vim_vue_plugin_use_stylus= 1
-    let g:vim_vue_plugin_highlight_vue_attr = 1
-    let g:vim_vue_plugin_use_scss= 1
-    let g:vim_vue_plugin_use_sass= 1
-
 "----------------------GOLANG------------------------------------------------
 
-    " Run gofmt on save
-    autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+    "Imports Go on Save
     let g:go_fmt_command = "goimports"
 
     "Maps
@@ -306,19 +290,17 @@ call plug#end()
     let g:go_highlight_diagnostic_warnings = 1
 
 "------------------------------------------------------------------------------------
-" FILES AND LINT
+" NERDTREE
 "------------------------------------------------------------------------------------
 
     "File
     nnoremap <C-l> :NERDTreeToggle<CR>
     let NERDTreeShowHidden=1
 
-    " ESLint fix
-    let g:ale_fixers = {}
-    let g:ale_fixers.javascript = ['eslint']
-    let g:ale_fixers.vue = ['eslint']
-    let g:ale_fix_on_save = 1
-
+"------------------------------------------------------------------------------------
+" CURSOR LAST POSITION
+"------------------------------------------------------------------------------------
+ 
     "autocmd BufEnter * lcd %:p:h
     if has("autocmd")
         au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
