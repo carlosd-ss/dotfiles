@@ -207,7 +207,7 @@ call plug#end()
     nnoremap <Leader>w <C-w>w
 
     "Substitute all
-    nnoremap <leader>su :%s/new/old/g
+    nnoremap <leader>su :%s/original_string/new_string/g
     nnoremap <leader>sp :grep original_string
     nnoremap <leader>sb :cfdo %s/original_string/new_string/g
     
