@@ -66,8 +66,9 @@ call plug#begin()
     "Comment
     Plug 'preservim/nerdcommenter'
     
-    "Markdown
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    "Markdown and HTML
+    Plug 'shime/vim-livedown'  
+    Plug 'turbio/bracey.vim'
 
 "------------------------------------------------------------------------------------
 " LANGUAGES PLUGS
@@ -227,9 +228,11 @@ call plug#end()
     inoremap <S-Up> <Esc>:m-2<CR>
     inoremap <S-Down> <Esc>:m+<CR>
     
-    "Markdown Preview
-    nmap <leader>mp :MarkdownPreview<cr>
-    nmap <leader>ms :MarkdownPreviewStop<cr>
+    "Markdown Preview and HTML
+    nmap <leader>mp :LivedownPreview<cr>
+    nmap <leader>ms :LivedownKill<cr>
+    nmap <leader>lp :Bracey<cr>
+    nmap <leader>ls :BraceyStop<cr>
 
 "------------------------------------------------------------------------------------
 " SNIPS
