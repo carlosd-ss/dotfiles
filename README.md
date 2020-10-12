@@ -60,20 +60,3 @@ yay -S polybar
 
 <img src="https://github.com/carlosd-ss/dotfiles/blob/master/.github/bar.png"  widht="100">
 
-
-
-
-
-### NVIM
-![NVIM](https://img.shields.io/badge/NEOVIM-%2357A143?style=for-the-badge&logo=Neovim&labelColor=%23444444)
-![KITTY](https://img.shields.io/badge/TERMINAL-KITTY-%23784421?style=for-the-badge&labelColor=%23444444)
-
-<img src="https://github.com/carlosdss22/dotfiles/blob/master/.github/neovim-logo-shadow.png" height="100" widht="100">
-
-
-#### DEPENDENCES
-
-```zsh
-
- :CocInstall coc-tabnine coc-yaml coc-snippets coc-highlight coc-html  coc-tsserver coc-css coc-vetur coc-json coc-pairs  coc-go coc-sql coc-fzf-preview coc-eslint coc-tslint-plugin
-```
