@@ -15,6 +15,7 @@
       \ 'coc-tabnine',
       \ 'coc-tsserver',
       \ 'coc-vetur',
+      \ 'coc-html',
       \ 'coc-css',
       \ 'coc-highlight',
       \ 'coc-styled-components',

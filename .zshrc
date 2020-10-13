@@ -99,9 +99,11 @@ bindkey '^[[B' history-substring-search-down
 source /home/cdss/.antigen/bundles/zsh-users/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#665c54,bg=default,bold,underline"
+
 #-----------------------------------------------------------------------------------------------------------------
 # ALIAS
 #-----------------------------------------------------------------------------------------------------------------
 
-alias vim="nvim"
+#alias vim="nvim"
+alias vim="nvim.appimage"
 alias ls="lsd"
