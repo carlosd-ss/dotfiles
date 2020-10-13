@@ -1,53 +1,85 @@
 {
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod"],
-      "disableWorkspaceFolders": true,
-      "filetypes": ["go"]
+    "languageserver": {
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": [
+                "go.mod"
+            ],
+            "disableWorkspaceFolders": true,
+            "filetypes": [
+                "go"
+            ]
+        },
+        "elmLS": {
+            "command": "elm-language-server",
+            "filetypes": [
+                "elm"
+            ],
+            "rootPatterns": [
+                "elm.json"
+            ],
+            "initializationOptions": {
+                "elmPath": "elm",
+                "elmFormatPath": "elm-format",
+                "elmTestPath": "elm-test",
+                "elmAnalyseTrigger": "change"
+            }
+        },
+        "dockerfile": {
+            "command": "docker-langserver",
+            "filetypes": [
+                "dockerfile"
+            ],
+            "args": [
+                "--stdio"
+            ]
+        },
+        "sql": {
+            "command": "sql-language-server",
+            "args": [
+                "up",
+                "--method",
+                "stdio"
+            ],
+            "filetypes": [
+                "sql",
+                "mysql",
+                "postgresql"
+            ]
+        },
+        "bash": {
+            "command": "bash-language-server",
+            "args": [
+                "start"
+            ],
+            "filetypes": [
+                "sh"
+            ],
+            "ignoredRootPaths": [
+                "~"
+            ]
+        }
     },
-    "elmLS": {
-      "command": "elm-language-server",
-      "filetypes": ["elm"],
-      "rootPatterns": ["elm.json"],
-      "initializationOptions": {
-        "elmPath": "elm",
-        "elmFormatPath": "elm-format",
-        "elmTestPath": "elm-test",
-        "elmAnalyseTrigger": "change"
-      }
-    },
-    "dockerfile": {
-      "command": "docker-langserver",
-      "filetypes": ["dockerfile"],
-      "args": ["--stdio"]
-    },
-    "sql": {
-      "command": "sql-language-server",
-      "args": ["up", "--method", "stdio"],
-      "filetypes": ["sql", "mysql", "postgresql"]
-    },
-    "bash": {
-      "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"],
-      "ignoredRootPaths": ["~"]
-    }
-  },
-  "coc.preferences.extensionUpdateCheck": "daily",
-  "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "html",
-    "css",
-    "javascript",
-    "typescript",
-    "elm",
-    "vue",
-    "go",
-    "markdown",
-    "json",
-    "jsonc",
-    "yml",
-    "yaml"
-  ]
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "coc.preferences.formatOnType": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "elm",
+        "vue",
+        "go",
+        "markdown",
+        "json",
+        "jsonc",
+        "yml",
+        "yaml"
+    ],
+    "eslint.autoFixOnSave": true,
+    "eslint.filetypes": [
+        "javascript",
+        "typescript",
+        "vue"
+    ]
 }
