@@ -55,7 +55,7 @@ call plug#begin()
     
     "Markdown and HTML
     Plug 'shime/vim-livedown'  
-    Plug 'turbio/bracey.vim'
+ 
 
 "------------------------------------------------------------------------------------
 " LANGUAGES PLUGS

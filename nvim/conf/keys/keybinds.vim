@@ -52,8 +52,6 @@
     "Markdown Preview and HTML
     nmap <leader>mp :LivedownPreview<cr>
     nmap <leader>ms :LivedownKill<cr>
-    nmap <leader>lp :Bracey<cr>
-    nmap <leader>ls :BraceyStop<cr>
 
 
 
