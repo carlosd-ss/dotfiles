@@ -62,6 +62,7 @@
     },
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.formatOnType": true,
+    "diagnostic.displayByAle": true,
     "coc.preferences.formatOnSaveFiletypes": [
         "html",
         "css",
