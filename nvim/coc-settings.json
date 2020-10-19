@@ -9,21 +9,6 @@
                 "go"
             ]
         },
-        "elmLS": {
-            "command": "elm-language-server",
-            "filetypes": [
-                "elm"
-            ],
-            "rootPatterns": [
-                "elm.json"
-            ],
-            "initializationOptions": {
-                "elmPath": "elm",
-                "elmFormatPath": "elm-format",
-                "elmTestPath": "elm-test",
-                "elmAnalyseTrigger": "change"
-            }
-        },
         "dockerfile": {
             "command": "docker-langserver",
             "filetypes": [
@@ -77,7 +62,6 @@
         "css",
         "javascript",
         "typescript",
-        "elm",
         "vue",
         "go",
         "markdown",
