@@ -104,6 +104,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#665c54,bg=default,bold,underline"
 # ALIAS
 #-----------------------------------------------------------------------------------------------------------------
 
-#alias vim="nvim"
-alias vim="nvim.appimage"
+alias vim="nvim"
 alias ls="lsd"
+
+
+export _JAVA_AWT_WM_NONREPARENTING=1
