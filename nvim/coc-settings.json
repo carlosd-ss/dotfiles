@@ -60,6 +60,7 @@
     "coc.preferences.formatOnSaveFiletypes": [
         "html",
         "css",
+        "scss",
         "javascript",
         "typescript",
         "vue",

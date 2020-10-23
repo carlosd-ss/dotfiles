@@ -17,6 +17,7 @@
       \ 'coc-vetur',
       \ 'coc-html',
       \ 'coc-css',
+      \ 'coc-prettier',
       \ 'coc-highlight',
       \ 'coc-styled-components',
       \ 'coc-eslint',
