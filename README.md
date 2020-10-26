@@ -1,4 +1,4 @@
-<img src="https://github.com/carlosd-ss/dotfiles/blob/master/.github/a.svg" widht="200">
+<img src="https://github.com/carlosd-ss/dotfiles/blob/master/.github/a.svg" widht="400">
 
 ## Installation
 
