@@ -24,7 +24,6 @@
       \ 'coc-yaml',
       \ 'coc-sh',
       \ 'coc-pairs',
-      \ 'coc-highlight',
       \ 'coc-snippets',
       \ 'coc-fzf-preview'
       \ ]

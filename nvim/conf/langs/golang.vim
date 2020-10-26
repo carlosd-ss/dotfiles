@@ -5,7 +5,10 @@
 
     "Imports Go on Save
     let g:go_fmt_command = "goimports"
-
+    let g:go_debug_windows = {
+      \ 'vars':       'rightbelow 60vnew',
+      \ 'stack':      'rightbelow 10new',
+\ }
     "Maps
     nnoremap <leader>jt :CocCommand go.tags.add<cr>
     nnoremap <leader>ct :CocCommand go.tags.clear<cr>
