@@ -14,7 +14,8 @@ configuration {
 }
  
 #window {
-    border: 0;
+    border: 2px;
+    border-color:#98971a;
     border-radius: 4px;
     padding: 50;
     width: 28%;
