@@ -63,3 +63,4 @@ setxkbmap -layout br,us -option grp:shift_caps_toggle
 # FILES
 #----------------------------------------------------------------------------------------------------
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
