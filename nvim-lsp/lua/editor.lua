@@ -1,12 +1,7 @@
 local utils = require("modules.utils")
 
 local function set_globals()
-  vim.g.mapleader = "\<space>"
-  vim.g.python3_host_prog = vim.fn.expand("~/.pyenv/versions/3.8.2/bin/python")
-  vim.g.python_host_prog = vim.fn.expand("~/.pyenv/versions/2.7.17/bin/python")
-  vim.g["test#strategy"] = "floaterm"
-  vim.g.floaterm_height = 0.8
-  vim.g.floaterm_width = 0.8
+  vim.g.mapleader = " "
   vim.g.neoformat_basic_format_trim = true
   vim.g.diagnostic_enable_virtual_text = true
 end
@@ -45,10 +40,6 @@ local function set_options()
     scrolloff = 12,
     completeopt = "menuone,noinsert,noselect",
     swapfile = false,
-    noswapfile = true,
-    nobackup = true, 
-    nowritebackup = true,
-    noundofile   = true,
     ttyfast = true,
     autowrite = true,
     cursorline = true,
@@ -101,33 +92,10 @@ FILETYPE_HOOKS = {
     vim.g.go_metalinter_enabled = {}
     vim.g.go_metalinter_autosave_enabled = {}
     vim.g.go_doc_popup_window = true
-    vim g:go_highlight_array_whitespace_error = true
-    vim g:go_highlight_chan_whitespace_error =  true
-    vim g:go_highlight_extra_types = true
-    vim g:go_highlight_space_tab_error = true
-    vim g:go_highlight_trailing_whitespace_error = true
-    vim g:go_highlight_operators = true
-    vim g:go_highlight_functions = true
-    vim g:go_highlight_function_parameters = true
-    vim g:go_highlight_function_calls = true
-    vim g:go_highlight_types = true
-    vim g:go_highlight_fields = true
-    vim g:go_highlight_build_constraints = true
-    vim g:go_highlight_generate_tags = true
-    vim g:go_highlight_string_spellcheck = true
-    vim g:go_highlight_format_strings = true
-    vim g:go_highlight_variable_declarations = true
-    vim g:go_highlight_variable_assignments = true
-    vim g:go_highlight_diagnostic_errors = true
-    vim g:go_highlight_diagnostic_warnings = true	
 
     for _, map in pairs(mappings) do
       vim.api.nvim_buf_set_keymap(0, unpack(map))
     end
-  end,
-  python = function()
-    vim.g["test#python#runner"] = "pytest"
-    vim.g.neoformat_enabled_python = {"black"}
   end,
   viml = function()
     vim.bo.shiftwidth = 2
@@ -161,23 +129,23 @@ set_colors()
 local opts = {noremap = true}
 local mappings = {
   {"n", "<leader>ev", [[<Cmd>edit $HOME/.config/nvim/lua/init.lua<CR>]], opts},
+  {"n", "<leader>sv", [[<Cmd>source $HOME/.config/nvim/lua/init.lua<CR>]], opts},
   {"n", "<leader>up", [[<Cmd>PackerSync<CR>]], opts},
   {"n", "<leader>\\", [[<Cmd>noh<CR>]], opts},
   {"n", "<tab>", [[<Cmd>b#<CR>]], opts},
   {"n", "<c-p>", [[<Cmd>Telescope find_files<CR>]], opts},
   {"n", "<c-f>", [[<Cmd>Telescope live_grep<CR>]], opts},
+  {"n", "<c-l>", [[<Cmd>LuaTreeToggle<CR>]], opts},
   {"n", "<c-right>", [[<Cmd>tabnext<CR>]], opts},
   {"n", "<c-left>", [[<Cmd>tabprevious<CR>]], opts},
-  {"n", "<leader>w", [[<C-w>W]], opts},
+  {"n", "<leader>w", [[<C-w>w]], opts},
   {"n", "<leader>su", [[<Cmd>%s/original_string/new_string/g]], opts},
   {"n", "<leader>sb", [[<Cmd>cfdo %s/original_string/new_string/g]], opts},
-  {"n", "<C-_">, [[<Plug>NERDCommenterToggle]], opts},
-  {"v", "<C-_">, [[<Plug>NERDCommenterToggle]], opts},
-  {"x", "<C-_">, [[<Plug>NERDCommenterToggle]], opts},
-  {"n", "<S-Up">, [[<Cmd>m-2<CR>]], opts},
-  {"i", "<S-Up">, [[<Cmd>m-2<CR>]], opts},
-  {"n", "<S-Down">, [[<Cmd>m+<CR>]], opts},
-  {"i", "<S-Down">, [[<Cmd>m+<CR>]], opts},
+  {"n", "<leader>mp", [[<Cmd>Glow<CR>]], opts},
+  {"n", "<S-Up>", [[<Cmd>m-2<CR>]], opts},
+  {"i", "<S-Up>", [[<Cmd>m-2<CR>]], opts},
+  {"n", "<S-Down>", [[<Cmd>m+<CR>]], opts},
+  {"i", "<S-Down>", [[<Cmd>m+<CR>]], opts},
 }
 
 for _, map in pairs(mappings) do

@@ -6,13 +6,6 @@ endif
 
 lua << END
 local plugins = {
-  ["emmet-vim"] = {
-    config = { "\27LJ\1\2,\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\17modules.html\frequire\0" },
-    loaded = false,
-    only_sequence = false,
-    only_setup = false,
-    path = "/home/cdss/.local/share/nvim/site/pack/packer/opt/emmet-vim"
-  },
   ["packer.nvim"] = {
     loaded = false,
     only_sequence = false,
@@ -150,18 +143,16 @@ end
 -- Post-load configuration
 -- Config for: nvim-bufferline.lua
 loadstring("\27LJ\1\0028\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\15bufferline\frequire\0")()
--- Config for: nvim-treesitter
-loadstring("\27LJ\1\2A\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\vconfig\23modules.treesitter\frequire\0")()
+-- Config for: nvim-lspconfig
+loadstring("\27LJ\1\2H\0\0\2\0\3\0\a4\0\0\0%\1\1\0>\0\2\0014\0\0\0%\1\2\0>\0\2\1G\0\1\0\21modules.snippets\16modules.lsp\frequire\0")()
 -- Config for: nvim-colorizer.lua
 loadstring("\27LJ\1\0027\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\14colorizer\frequire\0")()
 -- Config for: gruvbox.nvim
 loadstring("\27LJ\1\2e\0\0\2\0\4\0\t4\0\0\0007\0\1\0)\1\2\0:\1\2\0004\0\0\0007\0\1\0)\1\2\0:\1\3\0G\0\1\0\29gruvbox_improved_strings\31gruvbox_italicize_comments\6g\bvim\0")()
--- Config for: nvim-lspconfig
-loadstring("\27LJ\1\2H\0\0\2\0\3\0\a4\0\0\0%\1\1\0>\0\2\0014\0\0\0%\1\2\0>\0\2\1G\0\1\0\21modules.snippets\16modules.lsp\frequire\0")()
+-- Config for: nvim-treesitter
+loadstring("\27LJ\1\2A\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\vconfig\23modules.treesitter\frequire\0")()
 -- Config for: galaxyline.nvim
 loadstring("\27LJ\1\0022\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\23modules.statusline\frequire\0")()
--- Config for: telescope.nvim
-loadstring("\27LJ\1\2.\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\19modules.search\frequire\0")()
 -- Conditional loads
 -- Load plugins in order defined by `after`
 END
@@ -178,9 +169,6 @@ endfunction
 augroup packer_load_aucmds
   au!
   " Filetype lazy-loads
-  au FileType scss ++once call s:load(['emmet-vim'], { "ft": "scss" })
-  au FileType html ++once call s:load(['emmet-vim'], { "ft": "html" })
-  au FileType css ++once call s:load(['emmet-vim'], { "ft": "css" })
   au FileType go ++once call s:load(['vim-go'], { "ft": "go" })
   " Event lazy-loads
 augroup END

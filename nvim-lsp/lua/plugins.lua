@@ -53,18 +53,15 @@ return require("packer").startup(function(use)
 --########################################################
 -- CODE EDIT
 --########################################################
-
   use {"tpope/vim-commentary"}
   use {"sbdchd/neoformat"}
+  use {"npxbr/glow.nvim"}
 
 --########################################################
 -- SEARCH FILES
 --########################################################
   use {
     "nvim-lua/telescope.nvim",
-    config = function()
-      require("modules.search")
-    end,
     requires = {"nvim-lua/popup.nvim"},
   }
 
@@ -81,6 +78,7 @@ return require("packer").startup(function(use)
     requires = {
       "nvim-lua/completion-nvim",
       "norcalli/snippets.nvim",
+      "tjdevries/nlua.nvim",	
       "euclidianAce/BetterLua.vim",
     },
   }
@@ -107,16 +105,13 @@ return require("packer").startup(function(use)
 -- LANGS 
 --########################################################
   
--- Go
+  -- Go
   use {"fatih/vim-go", run = ":GoUpdateBinaries", ft = {"go"}}
 
-  -- HTML/CSS
-  use {
-    "mattn/emmet-vim",
-    ft = {"html", "css", "scss"},
-    config = function()
-      require("modules.html")
-    end,
-  }
+
+--########################################################
+-- FILES 
+--########################################################
+	use {"kyazdani42/nvim-tree.lua"}
 
 end)
