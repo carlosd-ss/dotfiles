@@ -49,6 +49,13 @@ return require("packer").startup(function(use)
   use {"wbthomason/packer.nvim", opt = true}
   use {"mhinz/vim-startify"}
   use {"nvim-lua/plenary.nvim"}
+  use {"jiangmiao/auto-pairs"}
+  use {"alvan/vim-closetag",
+      config = function()
+      vim.g.closetag_filenames = "*.html,*.xhtml,*.phtml, *.vue"
+    end,
+
+}
 
 --########################################################
 -- CODE EDIT

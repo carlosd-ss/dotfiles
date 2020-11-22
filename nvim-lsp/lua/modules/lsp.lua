@@ -32,7 +32,7 @@ local function make_on_attach(config)
   end
 end
 
-local servers = {gopls = {}, tsserver = {}, yamlls = {}, vimls = {}, }
+local servers = {gopls = {}, tsserver = {}, yamlls = {}, vimls = {},html = {}, cssls = {}, dockerls = {},sqlls = {}, sumneko_lua = {}, vuels = {} }
 
 -- lua special case
 require("nlua.lsp.nvim").setup(nvim_lsp, {
