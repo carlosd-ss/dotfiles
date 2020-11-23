@@ -45,7 +45,7 @@
     set expandtab
     retab
     set sw=4
-    
+    set list lcs=tab:\|\    
     "Line numbers color
     highlight clear LineNr
     highlight clear SignColumn

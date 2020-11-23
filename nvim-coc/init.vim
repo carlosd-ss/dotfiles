@@ -55,7 +55,9 @@ call plug#begin()
     
     "Markdown and HTML
     Plug 'shime/vim-livedown'  
- 
+    
+    "Ident"
+    "Plug 'Yggdroot/indentLine' 
 
 "------------------------------------------------------------------------------------
 " LANGUAGES PLUGS
