@@ -9,6 +9,9 @@
       \ 'vars':       'rightbelow 60vnew',
       \ 'stack':      'rightbelow 10new',
 \ }
+  
+let g:ale_linters = {'go': ['gometalinter']}
+
     "Maps
     nnoremap <leader>jt :CocCommand go.tags.add<cr>
     nnoremap <leader>ct :CocCommand go.tags.clear<cr>
