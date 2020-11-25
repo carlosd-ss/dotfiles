@@ -9,12 +9,7 @@
       \ 'vars':       'rightbelow 60vnew',
       \ 'stack':      'rightbelow 10new',
 \ }
-    "Set Linter
-    let g:ale_linters = {'go': ['gometalinter']}
     
-    "Set this. Airline will handle the rest.
-    let g:airline#extensions#ale#enabled = 1
-
     "Maps
     nnoremap <leader>jt :CocCommand go.tags.add<cr>
     nnoremap <leader>ct :CocCommand go.tags.clear<cr>

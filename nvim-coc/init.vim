@@ -1,9 +1,7 @@
 
 "--------------------------------Plugins---------------------------------------------
 
-
-"ALE LINT
-let g:ale_disable_lsp = 1
+source $HOME/.config/nvim/config/lint/lint.vim
 
 
 call plug#begin()
@@ -77,10 +75,9 @@ call plug#begin()
 call plug#end()
 
 
-source $HOME/.config/nvim/conf/themes/theme.vim
-source $HOME/.config/nvim/conf/standard/basic.vim
-source $HOME/.config/nvim/conf/keys/keybinds.vim
-source $HOME/.config/nvim/conf/langs/golang.vim
-source $HOME/.config/nvim/conf/langs/html.vim
-source $HOME/.config/nvim/conf/autocomplete/coc.vim
-
+source $HOME/.config/nvim/config/themes/theme.vim
+source $HOME/.config/nvim/config/default/default.vim
+source $HOME/.config/nvim/config/keybinds/keybinds.vim
+source $HOME/.config/nvim/config/languages/golang.vim
+source $HOME/.config/nvim/config/languages/html.vim
+source $HOME/.config/nvim/config/autocomplete/autocomplete.vim
