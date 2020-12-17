@@ -42,6 +42,7 @@
 
     "Ident
     set tabstop=4
+    set softtabstop=4
     set expandtab
     retab
     set sw=4
