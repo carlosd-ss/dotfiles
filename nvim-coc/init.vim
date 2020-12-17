@@ -10,7 +10,7 @@ call plug#begin()
 "THEME AND INTERFACE
 "------------------------------------------------------------------------------------
     "Gruvbox
-    Plug 'morhetz/gruvbox'
+    Plug 'gruvbox-community/gruvbox'
     
     "Airline
     Plug 'vim-airline/vim-airline'
