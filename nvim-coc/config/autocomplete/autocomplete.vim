@@ -9,6 +9,7 @@
     
     let g:coc_global_extensions = [
       \ 'coc-go',
+      \ 'coc-lua',
       \ 'coc-sql',
       \ 'coc-docker',
       \ 'coc-json',
