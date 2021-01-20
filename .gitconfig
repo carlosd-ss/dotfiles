@@ -4,6 +4,7 @@
 
 [core]
 	editor = vim
+	excludesfile = /home/cdss/.gitignore
 [merge]
 	tool = vimdiff
 [url "ssh://git@github.com/"]
