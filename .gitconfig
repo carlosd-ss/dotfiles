@@ -9,5 +9,8 @@
 	tool = vimdiff
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[url "git@bitbucket.org:"]
+        insteadOf = https://bitbucket.org/
+
 [color]
-	ui = true
+    ui = true
