@@ -12,10 +12,10 @@
     nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
 
     "Fuzzy search Files
-    nnoremap <c-p> :Files<cr>
-
+    nnoremap <c-p> <cmd>Telescope find_files<cr>
+    
     "Search ocurrencys
-    nnoremap <c-f> :Ag<cr>
+    nnoremap <c-f> <cmd>Telescope live_grep<cr>
 
     "File Buffer
     nnoremap <tab> :b#<cr>
@@ -61,10 +61,11 @@
 
 
 "------------------------------------------------------------------------------------
-" NERDTREE
+" FILE
 "------------------------------------------------------------------------------------
 
     "File
-    nnoremap <C-l> :NERDTreeToggle<CR>
-    let NERDTreeShowHidden=1
+    nnoremap <C-l> :NvimTreeToggle<CR>
+    nnoremap <leader>r :NvimTreeRefresh<CR>
+    nnoremap <leader>n :NvimTreeFindFile<CR>
 

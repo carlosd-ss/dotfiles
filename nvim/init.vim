@@ -24,16 +24,18 @@ call plug#begin()
 "------------------------------------------------------------------------------------
 
     "Files Search
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+
 
     "Snippets
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
 
-    "NerdTree
-    Plug 'preservim/nerdtree'
-    Plug 'Xuyuanp/nerdtree-git-plugin'
+    "Files
+    Plug 'kyazdani42/nvim-tree.lua'
+
 "------------------------------------------------------------------------------------
 " AUTOCOMPLETE
 "------------------------------------------------------------------------------------

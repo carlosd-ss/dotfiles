@@ -14,7 +14,6 @@
     nnoremap <leader>jt :CocCommand go.tags.add<cr>
     nnoremap <leader>ct :CocCommand go.tags.clear<cr>
     nnoremap <leader>gt :CocCommand go.test.generate.file<cr>
-    nnoremap <leader>gr :GoReferrers<cr>
 
     "Syntax Highlighting
     let g:go_fold_enable = ['block', 'import', 'varconst', 'package_comment']
