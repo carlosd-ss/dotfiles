@@ -57,9 +57,6 @@ antigen bundle utility
 antigen bundle completion
 antigen apply
 
-prompt belak
-bindkey -e
-
 zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'
 setopt auto_cd
 
@@ -96,9 +93,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#665c54,bg=default,bold,underline"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export GOPRIVATE="bitbucket.org/freterapido"
-PATH=$PATH:$HOME/.docker-bin
-export PATH="$PATH:$(go env GOPATH)/bin"
 
 #-----------------------------------------------------------------------------------------------------------------
 # ALIAS
