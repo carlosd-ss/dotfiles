@@ -98,12 +98,11 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export GOPRIVATE="bitbucket.org/freterapido"
 PATH=$PATH:$HOME/.docker-bin
-
+export PATH="$PATH:$(go env GOPATH)/bin"
 
 #-----------------------------------------------------------------------------------------------------------------
 # ALIAS
 #-----------------------------------------------------------------------------------------------------------------
-alias vim="nvim.appimage"
-#alias vim="nvim"
-alias ls="lsd"
 
+alias vim="nvim"
+alias ls="lsd"
